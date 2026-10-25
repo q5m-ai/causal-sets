@@ -139,6 +139,8 @@ import BoundaryDraft.MixedNullReduction
 import BoundaryDraft.MixedNullLimit
 import BoundaryDraft.MixedNullGeometryExamples
 import BoundaryDraft.MixedNullFaces
+import BoundaryDraft.MixedNullCoareaTransport
+import BoundaryDraft.MixedNullProbabilityLayers
 import BoundaryDraft.SpacetimeSprinkling
 import BoundaryDraft.FiniteCausalOrder
 import BoundaryDraft.DiscreteBDG
