@@ -124,7 +124,9 @@ It proves, for the actual strict cone-ending region:
 
 - `MixedNullData.isOpen_region`, `isBounded_region`, `causallyConvex`:
   measurability/boundedness and containment of the **closed ambient interval**;
-- `floor_future`, `complete_future`: MA5–MA6, retaining all causal partners;
+- `floor_future`, `complete_future`: MA5's forward-invariance consequence and
+  MA6, retaining all causal partners; the full displayed quantitative MA5
+  inequality is not separately encoded;
 - `future_kernel_identity`, `continuumMean_eq_spacetimeGaussian`: MA8 and
   exact cancellation of the original signed bilocal action;
 - `expectedBDGAction_eq`, `expectedBDGAction_eq_spacetimeGaussian`: the separate
@@ -159,7 +161,9 @@ promises that unknown mathematics has been solved:
    reduction: radial root and induced screen-area theorem, exact scalar
    transport, right-hand density limit and Gaussian concentration. Completion
    means deterministic **and** expected limits with the independently defined
-   geometric target for every original MA floor, including the sine example.
+   geometric target for every original smooth MA floor, including the sine
+   example. Restore that smoothness hypothesis for induced area; it does not
+   follow from the weaker finite-density `MixedNullData` contract.
 2. **Shared curved short spine (highest reuse, high specification risk).**
    Freeze intrinsic curvature/measure/normal conventions first. Port S1–S8,
    then derivative-controlled S9–S18, then S19/S25/S29 and S30. Each stage
@@ -216,5 +220,30 @@ stock `Lean.collectAxioms` after every prefix of a fixture's roots.
 `test_formal_check.py` separately tests discovery, failures and orchestration.
 No full legacy audit is rerun merely to benchmark it; the historical 2:42:37
 receipt is evidence about that earlier run, not a controlled same-host speedup
-measurement. Final timings and input identity are recorded in the validation
-receipt accompanying this change.
+measurement.
+
+### Final local validation
+
+The [input-pinned receipt](receipts/proof-coverage-validation.json),
+[compressed full log](receipts/proof-coverage-full-audit.log.gz), and
+[resource measurement](receipts/proof-coverage-full-audit.time.txt) record:
+
+| Gate | Result | Wall time |
+| --- | --- | --- |
+| Incremental against the actual integration ancestor, including changed aggregate audit | Passed | 0:33.93 |
+| Full local gate, two workers, warm library build | **Passed: 346 Lean files; 345 isolated source audits plus aggregate; 3,498 public library theorems and all public definitions** | **42:12.05** |
+| Markdown/checker tests, including eight real-Lean adversarial tests | 39 passed | 0:22.46 |
+| Relevant mixed-region and Poisson diagnostics, pinned Python dependencies | 23 passed | 0:30.61 |
+
+All 350 local formal source/checker/configuration fingerprints agree before
+and after the full run and with code commit
+`18053bec7b220282db29c84a550cb9d7eb543840`. The nine dependency checkouts match
+the committed manifest and have clean tracked sources. Peak single-process
+RSS was 2,916,828 KiB; this is not total concurrent memory. Dependency setup
+and the initial cold local build preceded the measured full run.
+
+All applicable CI passed on `fd3c61aca8fcb68a2e1a4bf4f68930a535b4d302`.
+The final followup changes receipts and explanatory Markdown only; exact-head
+CI is visible on [PR #189](https://github.com/q5m-ai/causal-sets/pull/189).
+No additional Lean audit is needed for that documentation-only followup.
+This validation does not change any written-only row into a checked theorem.

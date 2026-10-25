@@ -1739,7 +1739,10 @@ Every public root and every reachable dependency is still checked; repeated
 walks through the same dependencies are eliminated. State is never reused
 between files or runs. The historical timings above describe the older
 per-root traversal. See [the coverage map](PROOF_COVERAGE.md#efficient-verification-without-weakening-the-gate)
-and the new validation receipt for the current gate and measured run. Real
+and the [input-pinned validation receipt](receipts/proof-coverage-validation.json)
+for the current gate: 346 Lean files passed in **42:12.05** with two workers
+and a warm library build. The initial cold build/dependency setup is separate;
+this is not a controlled comparison with the historical timings. Real
 adversarial tests require the pinned toolchain, but no mathlib build:
 
 ```sh
