@@ -92,8 +92,14 @@ run_cmd do
   let env ← Lean.getEnv
   let declarations := env.constants.toList.filter fun (name, _) =>
     (env.getModuleIdxFor? name).isNone && !name.isInternalDetail
+  -- Reuse Lean's visited set across all roots in this fresh environment.
+  -- No declaration is skipped: previously visited dependencies were checked
+  -- already. State never survives this process or crosses source environments.
+  let mut state : Lean.CollectAxioms.State := {}
   for (declaration, _) in declarations do
-    for dependency in (← Lean.collectAxioms declaration) do
+    let (_, next) := ((Lean.CollectAxioms.collect declaration).run env).run state
+    state := next
+    for dependency in state.axioms do
       unless allowed.contains dependency do
         throwError "Unexpected axiom {dependency} in {declaration}"
 LEAN

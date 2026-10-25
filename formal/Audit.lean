@@ -3,7 +3,9 @@ import Lean.Util.CollectAxioms
 
 -- Fail rather than merely printing a warning. Audit every public declaration
 -- in the library namespace, so new theorems cannot escape a hand-kept list.
--- Private helper dependencies are included transitively by collectAxioms.
+-- Private helper dependencies are included by Lean's own CollectAxioms traversal.
+-- Share its visited set across roots: each reachable constant is visited once.
+-- This is an in-process traversal, not a cross-run cache or a smaller audit.
 -- Exclude compiler-generated implementation artifacts, not their dependencies
 -- when they actually occur in a public proof or definition.
 run_cmd do
@@ -13,17 +15,19 @@ run_cmd do
     name.getRoot == `BoundaryDraft && !name.isInternalDetail).mergeSort
       fun a b => a.1.toString ≤ b.1.toString
   let mut theoremCount := 0
+  let mut state : Lean.CollectAxioms.State := {}
   for (declaration, info) in declarations do
-    let dependencies ← Lean.collectAxioms declaration
-    for dependency in dependencies do
+    let (_, next) := ((Lean.CollectAxioms.collect declaration).run env).run state
+    state := next
+    for dependency in state.axioms do
       unless allowed.contains dependency do
         throwError "Unexpected axiom {dependency} in {declaration}"
     if info.isTheorem then
       theoremCount := theoremCount + 1
-      Lean.logInfo m!"{declaration} depends on axioms: {dependencies}"
+      Lean.logInfo m!"Audited theorem {declaration}"
   if theoremCount == 0 then
     throwError "No BoundaryDraft theorems were audited"
-  Lean.logInfo m!"Audited {theoremCount} public theorems and all public definitions in BoundaryDraft"
+  Lean.logInfo m!"Audited {theoremCount} public theorems and all public definitions in BoundaryDraft; reachable axioms: {state.axioms}"
 
 -- These are propositions, not proofs of those propositions.
 #check BoundaryDraft.NullCapLimitGoal

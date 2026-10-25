@@ -109,7 +109,10 @@ class FormalCheckTest(unittest.TestCase):
         self.assertEqual({audit["source"] for audit in audits}, expected_sources)
         for audit in audits:
             self.assertIn("import Lean.Util.CollectAxioms", audit["content"])
-            self.assertIn("Lean.collectAxioms declaration", audit["content"])
+            self.assertIn("Lean.CollectAxioms.collect declaration", audit["content"])
+            self.assertIn("let mut state : Lean.CollectAxioms.State := {}", audit["content"])
+            self.assertIn(".run env).run state", audit["content"])
+            self.assertIn("state := next", audit["content"])
             self.assertIn("unless allowed.contains dependency", audit["content"])
 
     def test_build_failure_stops_validation(self):
