@@ -142,6 +142,7 @@ import BoundaryDraft.MixedNullFaces
 import BoundaryDraft.MixedNullCoareaTransport
 import BoundaryDraft.MixedNullProbabilityLayers
 import BoundaryDraft.MixedNullGeneratorTransport
+import BoundaryDraft.MixedNullGeneratorLocal
 import BoundaryDraft.MixedNullPartnerLedger
 import BoundaryDraft.MixedNullErrorExtension
 import BoundaryDraft.MixedNullCollar
