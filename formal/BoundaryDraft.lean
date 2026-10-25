@@ -134,6 +134,7 @@ import BoundaryDraft.NullCoordinates
 import BoundaryDraft.NullCapReduction
 import BoundaryDraft.NullGaussian
 import BoundaryDraft.NullCapLimit
+import BoundaryDraft.MixedNullReduction
 import BoundaryDraft.SpacetimeSprinkling
 import BoundaryDraft.FiniteCausalOrder
 import BoundaryDraft.DiscreteBDG
