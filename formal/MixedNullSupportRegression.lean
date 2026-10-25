@@ -1,5 +1,6 @@
 import BoundaryDraft.MixedNullContract
 import BoundaryDraft.MixedNullElementary
+import BoundaryDraft.MixedNullFrontier
 import BoundaryDraft.MixedNullWeighted
 import BoundaryDraft.NullGaussianRight
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
@@ -74,6 +75,24 @@ example {H : Spatial → ℝ} (hH : MixedNullData H) :
     0 < volume {p : Spacetime | -H (spatialPart p) < p 0 ∧
       p 0 < 0 ∧ spatialSeparationSq p 0 < (0 - p 0) ^ 2} :=
   hH.region_volume_pos
+
+-- The closed inequalities are proved, not supplied as part of admissibility.
+example {H : Spatial → ℝ} (hH : MixedNullData H) :
+    closure {p : Spacetime | -H (spatialPart p) < p 0 ∧
+      p 0 < 0 ∧ spatialSeparationSq p 0 < (0 - p 0) ^ 2} =
+      {p | -H (spatialPart p) ≤ p 0 ∧ p 0 ≤ -spatialDistance (spatialPart p) 0} :=
+  hH.closure_region
+
+example {H : Spatial → ℝ} (hH : MixedNullData H) :
+    frontier (mixedNullRegion H) =
+      {p | spatialDistance (spatialPart p) 0 ≤ H (spatialPart p) ∧ p 0 = -H (spatialPart p)} ∪
+      {p | spatialDistance (spatialPart p) 0 ≤ H (spatialPart p) ∧
+        p 0 = -spatialDistance (spatialPart p) 0} :=
+  hH.frontier_region
+
+-- Null four-volume is not being promoted to a normalized tip estimate.
+example {H : Spatial → ℝ} (hH : MixedNullData H) :
+    volume (frontier (mixedNullRegion H)) = 0 := hH.frontier_volume_zero
 
 -- The original positive-density law and discrete observable are integrable.
 example {H : Spatial → ℝ} (hH : MixedNullData H) {ρ : ℝ} (hρ : 0 < ρ) :
