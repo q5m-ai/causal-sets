@@ -135,6 +135,8 @@ import BoundaryDraft.NullCapReduction
 import BoundaryDraft.NullGaussian
 import BoundaryDraft.NullCapLimit
 import BoundaryDraft.MixedNullReduction
+import BoundaryDraft.MixedNullLimit
+import BoundaryDraft.MixedNullGeometryExamples
 import BoundaryDraft.SpacetimeSprinkling
 import BoundaryDraft.FiniteCausalOrder
 import BoundaryDraft.DiscreteBDG

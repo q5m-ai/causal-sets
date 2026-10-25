@@ -2,10 +2,16 @@
 
 ## Scope and source identities
 
-**This is a stocktake and a first port, not a claim that the whole research
+**This is a stocktake and incremental ports, not a claim that the whole research
 programme is now Lean verified.** A successful checker run certifies encoded
 statements only. Written proofs, numerical tests, model certificates, and
 independent human acceptance are different kinds of evidence.
+
+The follow-up [complete-coverage acceptance contract](FULL_COVERAGE_PLAN.md)
+sets the target to all asserted written claims and their supporting results,
+not just MA's next end-to-end theorem. The family inventory here is not yet an
+exhaustive statement-by-statement index; that accounting is an explicit open
+completion gate.
 
 The inventory uses these immutable sources:
 
@@ -45,7 +51,7 @@ longer namespace is shown. The linked files contain proof bodies, not just
 `Goal : Prop` declarations. Their assembly proofs use actual producers before
 transferring the expectation; they do not assume the desired limit.
 
-## Existing checked end-to-end results
+## Checked end-to-end results
 
 | Claim and exact scope | Actual Lean proof and dependency spine | Boundary |
 | --- | --- | --- |
@@ -57,6 +63,14 @@ transferring the expectation; they do not assume the desired limit.
 | Smooth flat 3D combined-budget pilot | [Pilot3Limit](BoundaryDraft/Pilot3Limit.lean): `SmoothPilot3.action_limit`, `expectedAction_limit`; intrinsic curve area, actual short/long producers and exact action split | Flat `SmoothPilot3`, not the curved 3D problem |
 | Smooth flat 2D combined-budget class | [TwoDLimit](BoundaryDraft/TwoDLimit.lean): `SmoothTwoD.tendsto_action`, `tendsto_expectedAction`; counted endpoints, actual short/long producers, original dimension-indexed action | Not the whole curved 2D G-SS theorem |
 | Fixed thin cubic quotient-torus slab in 4D, positive period and `0 < T < L / 2` | [ThinTorusLimit](BoundaryDraft/ThinTorusLimit.lean): `thinFlatTorusLimit4`; physical interval lifts/volume, exact plane-kernel reduction, separate original-law expectation | Not first-cut/thick slabs, arbitrary flat quotients, or all dimensions |
+
+The subsequent [smooth one-tip mixed port](MIXED_NULL_LIMIT.md) adds
+`AdmissibleMixedNull.continuumMean_limit` and `expectedBDGAction_limit`, with
+actual radial/joint geometry, positive induced Lorentzian Gram Jacobian,
+coordinate transport and singular spatial domination. This covers the entire
+original smooth MA class, not arbitrary null/mixed or curved geometry. Its
+verification and remaining supporting-note debt are recorded separately from
+the S-era results above.
 
 ### Reusable checked foundations, not broader limit proofs
 
@@ -72,7 +86,10 @@ transferring the expectation; they do not assume the desired limit.
 
 The four principal statements of the pinned manuscript, **CO, FLAT, SW and
 C2, are all written-only at their full quantified scope**. The narrower
-checked results above must not be relabeled as their proofs.
+checked results above must not be relabeled as their proofs. The bounded
+[supporting-spine inventory](WRITTEN_SUPPORTING_SPINES.md) also records RC, N,
+F/SC/SA, general metric/physical long, focal, quotient and localization-obstruction
+statements that must not disappear beneath a headline theorem.
 
 | Written claim, labels and hypotheses | Existing checked foothold | What a genuine completed port must add |
 | --- | --- | --- |
@@ -80,12 +97,15 @@ checked results above must not be relabeled as their proofs.
 | **FLAT**, [CFT1–CFT4](../notes/corrected-flat-theorem.md), [K1–K10](../notes/flat-klein-bottle-obstruction.md): every flat G-SS member in dimensions 2–4; specified Klein-bottle failures in every higher dimension | Restricted 2D/3D/4D graph theorems and thin 4D torus | Faithful development of arbitrary relevant lifted diamonds, physical unions counted once, dependent/infinite-order masks, whole target transport; actual Klein geometry and complete surviving response. Restricted coordinate theorems do not discharge these quantifiers |
 | **SW**, [SW1–SW14](../notes/sphere-dependent-conformal-limit.md): width-four sphere/period-20-circle slab, every fixed smooth positive spacetime-dependent conformal factor | `SphereCircle` measured order; finite-measure expectation | Physical weighted sphere lenses, both orientations and endpoints, antipodal abundance, integrable closing-fibre remainder, independent curvature target and full assembly |
 | **C2**, [C2.1–C2.18](../notes/curved-two-d-limit.md): every smooth curved 2D G-SS member, all admitted topology and counted endpoints | Flat `SmoothTwoD`, dimension-two kernel and generic expectation | Global null-coordinate/cover construction, actual weighted rectangle unions, both overlap corners, physical long primitive/remainder, S30 and full target restoration |
-| Shared curved short theorem **S30**, [S1–S30](../notes/general-metric-short-remainders.md), under the smooth G-SS contract | Flat moment/cancellation, coarea and overlap techniques; controlled conformal finite-density API | Intrinsic metric/curvature/normal target; actual thin interval and endpoint measures S1–S8; derivative/contact estimates S9–S18; full-cone S19, face S20–S25, joint S26–S29; all ordered chart pairs and compensation in S30 |
+| Shared curved short theorem **S30** and specialization S31, [S1–S31](../notes/general-metric-short-remainders.md), under the smooth G-SS contract | Flat moment/cancellation, coarea and overlap techniques; controlled conformal finite-density API | Intrinsic metric/curvature/normal target; actual thin interval and endpoint measures S1–S8; derivative/contact estimates S9–S18; full-cone S19, face S20–S25, joint S26–S29; all ordered chart pairs and compensation in S30 |
 | Minkowski all-dimensional limit [A1–A3](../notes/all-dimensional-flat-limit.md), smooth or its stated sufficient finite regularity; bounded 5D/6D short/long transfer | Dimension kernels, fixed-regulator wedge theorem and dimension-indexed Poisson bridge | Dimension-dependent actual overlap jets, critical remainders, intrinsic target and assembled action. Not an all-C³ theorem |
 | Controlled curved 4D two-face pilot [curved assembly](../notes/curved-assembly.md), fixed metric density `q(t)=1+t²` and its original geometric assumptions | Exact `conformal_expectedAction_eq` | Actual curved interval formula, averaged long contacts, interior/face/joint producers, cutoff/partition cancellation, independently computed curvature and joint area |
+| Nonpolynomial curved two-face [N1–N29](../notes/nonpolynomial-short-limit.md), original smooth subclass and stated time slab | Exact finite-density conformal expectation only | Actual nonpolynomial interval phase, short/long estimates, weighted C5 endpoint-field assembly, independent curvature/joint target and expected limit; not the fixed polynomial-density pilot |
+| Corrected focusing [RC1–RC17](../notes/curved4-corrected-convergence.md), and [F/SC/SA sphere/circle dependencies](WRITTEN_SUPPORTING_SPINES.md) | Measured-order sphere/circle expectation | Actual weighted lenses and all complements; RC's independent curvature target and conditional lens-power criterion; explicit narrower normalization/producer correspondences even if SW eventually supplies a stronger final limit |
 | Thin/first-cut torus families in every dimension; reflection-holonomy and 7D sphere-focusing obstructions | Thin **4D** port and generic measured-order bridge | Physical first-cut/route unions and dimension-dependent surviving responses; [holonomy](../notes/flat-holonomy-obstruction.md) H1–H15 and [focusing](../notes/seven-dimensional-focusing-obstruction.md) O1–O17 require their complete matching, not merely a selected sector |
 | Positive curved RPL/FCDC, Rosen plane-wave and Hadamard-optical classes | Conditional scalar cancellation and probability foundations | [RPL/FCDC](../notes/geometric-long-cancellation.md) actual geometric hypotheses; [PW-4](../notes/nonconformal-plane-wave-limit.md) actual interval and target; [HO-4](../notes/hadamard-optical-limit.md) whole-domain containment/index comparison and contact remainder. External manifold/index-form results need precise formal counterparts |
-| Flat one-tip mixed class [MA1–MA10](../notes/null-mixed-assembly.md); all-dimensional cone-ending class [ND1–ND9](../notes/null-cone-dimensions.md) | Concrete old null cap; **new finite-density MA port below** | Radial-root regularity and independent screen area, exact proper-time-square transport and dominated concentration for MA; separate beta-mixture/2D counting proofs for ND |
+| Flat one-tip mixed supporting statements [MA1–MA15](../notes/null-mixed-assembly.md) and [NM](../notes/null-mixed-estimates.md) | Core smooth-class deterministic and expected limits now assembled in [MixedNullLimit](BoundaryDraft/MixedNullLimit.lean); independent induced area; exact closure/frontier and signed measurable source partitions | MA9's particular global weight representation/bounds; MA11/NM quantitative weighted generator asymptotics; MA12/NM uniform tip/collar estimates; ancillary smooth-face/normal facts and complete per-layer/moment correspondence |
+| All-dimensional cone-ending class [ND1–ND9](../notes/null-cone-dimensions.md) | Concrete old null cap and the new flat 4D smooth MA limit | Separate beta-mixture/2D counting proofs and geometry at every stated dimension; a 4D Gaussian proof is not all-dimensional coverage |
 | Selected flat two-tip lens/union [TT-A/TT-B](../notes/two-tip-null-limit.md), conformal one-cone [CC1–CC14](../notes/conformal-cone-limit.md), regular conformal two-tip [CT](../notes/conformal-two-tip-limit.md) | Generic finite-law bridge only, not these null geometry instances | Actual whole physical union and masks, floor/generator/tip/crease terms, curved phase/remainder where applicable, independent induced screen target, full action and separate expectation |
 
 The CO model sign enclosure in
@@ -112,9 +132,9 @@ CT1–CT12 and the pinned review-package coverage table, not used to erase that
 additional written result. No issue closure or independent human approval
 follows from this stocktake.
 
-## First actual gap closure: mixed finite-density reduction
+## First port: mixed finite-density reduction
 
-New [MixedNullReduction.lean](BoundaryDraft/MixedNullReduction.lean) introduces
+[MixedNullReduction.lean](BoundaryDraft/MixedNullReduction.lean) introduces
 `MixedNullData H`: positive height at the origin and a global Euclidean
 Lipschitz constant strictly below one. These are weaker than MA's smooth
 geometric assumptions because finite-density reduction does not need
@@ -138,6 +158,27 @@ instantiates a nonempty genuinely nonaffine sine floor. **This closes only the
 finite-density part of MA3**, not MA7's induced area or MA9–MA10's limit.
 It neither expands the old null-cap theorem nor supplies the curved CC theorem.
 
+## Follow-up: the smooth one-tip mixed limit
+
+[MixedNullLimit.lean](BoundaryDraft/MixedNullLimit.lean) now connects the actual
+finite-density reduction to independent induced area for every original smooth
+MA floor, then transfers the deterministic limit through the original-law
+expectation equality. [The port record](MIXED_NULL_LIMIT.md) maps each geometric
+and analytic producer and records its validation. `MixedNullData` remains the
+weaker finite-density/analytic input; `AdmissibleMixedNull` restores smoothness
+for induced joint geometry. No desired conclusion becomes an input field.
+
+`MixedNullFrontier` adds the exact spatial/spacetime closures, complete two-face
+frontier, compact faces and four-volume-nullity. `MixedNullElementary` supplies
+the quantitative MA5 inequality and positive finite volume. `MixedNullWeighted`
+proves bounded measurable signed source-partition identities at finite density.
+The core MA3 limits and these statements do **not** imply complete coverage of
+MA1–MA15/NM: the specific global weight formula, quantitative weighted/tip
+estimates and ancillary statements listed in the table remain separate.
+The [detailed claim crosswalk](MIXED_NULL_CLAIMS.md) distinguishes definitions,
+actual proofs, partial results, available baseline specializations and genuine
+remaining producers for both numbered displays and associated prose.
+
 ## Minimal dependency DAG and finite port plan
 
 ```text
@@ -157,13 +198,12 @@ actual short producers ----- actual long/contact producers
 The following are bounded proposals, not automatically created issues or
 promises that unknown mathematics has been solved:
 
-1. **Finish MA (lowest-risk next complete port).** Build on the new exact
-   reduction: radial root and induced screen-area theorem, exact scalar
-   transport, right-hand density limit and Gaussian concentration. Completion
-   means deterministic **and** expected limits with the independently defined
-   geometric target for every original smooth MA floor, including the sine
-   example. Restore that smoothness hypothesis for induced area; it does not
-   follow from the weaker finite-density `MixedNullData` contract.
+1. **MA core milestone, then supporting-note closure.** The follow-up now
+   derives radial roots, smooth induced screen area, actual scalar transport
+   and concentration, with deterministic **and** expected limits for the entire
+   original smooth class. Finish the separately tracked weighted/tip estimates,
+   global-weight formulation and ancillary claims; do not equate the core
+   limit with complete coverage of its source notes.
 2. **Shared curved short spine (highest reuse, high specification risk).**
    Freeze intrinsic curvature/measure/normal conventions first. Port S1–S8,
    then derivative-controlled S9–S18, then S19/S25/S29 and S30. Each stage
@@ -222,7 +262,7 @@ No full legacy audit is rerun merely to benchmark it; the historical 2:42:37
 receipt is evidence about that earlier run, not a controlled same-host speedup
 measurement.
 
-### Final local validation
+### Previous finite-density-batch validation
 
 The [input-pinned receipt](receipts/proof-coverage-validation.json),
 [compressed full log](receipts/proof-coverage-full-audit.log.gz), and
@@ -246,4 +286,17 @@ All applicable CI passed on `fd3c61aca8fcb68a2e1a4bf4f68930a535b4d302`.
 The final followup changes receipts and explanatory Markdown only; exact-head
 CI is visible on [PR #189](https://github.com/q5m-ai/causal-sets/pull/189).
 No additional Lean audit is needed for that documentation-only followup.
-This validation does not change any written-only row into a checked theorem.
+This previous validation does not change any written-only row into a checked theorem.
+
+### Smooth mixed-limit follow-up validation
+
+The [new input-pinned receipt](receipts/mixed-null-limit-validation.json) records
+**361 Lean sources** (360 isolated checks plus aggregate), **3,607 public library
+theorems and all public definitions**, with warnings as errors and the unchanged
+three-axiom whitelist. The warm two-worker full run passed in **45:48.72**.
+All 365 formal source/checker/configuration fingerprints, all nine clean pinned
+dependencies and the toolchain match before and after the run at proof commit
+`17618065b5286d07f7eb41a6eb586cd52d8e35a0`. The changed-source gate passed in
+1:37.80; 39 checker/Markdown tests and 23 relevant diagnostics also passed.
+Subsequent changes are documentation/receipt-only. The completed MA3 theorem
+changes its own coverage status, not the remaining full-scope research claims.

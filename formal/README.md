@@ -3,9 +3,13 @@
 For a source-pinned comparison with the **whole written research programme**,
 see the [claim-to-Lean coverage map](PROOF_COVERAGE.md). It distinguishes the
 restricted checked limits from the written manuscript theorems, unresolved
-mathematics, and the remaining port plan. The new one-tip mixed module proves
-its actual finite-density reduction and separate expectation equality, **not**
-yet its induced-area limit.
+mathematics, and the remaining port plan. The
+[smooth one-tip mixed port](MIXED_NULL_LIMIT.md) now derives actual radial/joint
+geometry, Lorentzian induced area, scalar transport and concentration, then
+assembles the deterministic and separate original-law expected limits.
+The [complete-coverage acceptance contract](FULL_COVERAGE_PLAN.md) retains all
+remaining written results, including supporting claims not implied by this
+unweighted limit. Full research coverage is still incomplete.
 
 **Status: the general admissible graph-cap deterministic boundary limit,
 the original ellipsoid and null-plane-cap continuum limits, and the concrete
@@ -40,8 +44,10 @@ independence. The actual short-overlap C³ extension and its two-jet, signed
 logarithmic response, nearly-null remainder cancellation, spatial divergence
 identity, and target identification now complete both original two-face limit
 goals. The independently proved Poisson bridge supplies the expectation limit.
-Arbitrary null boundaries, induced null-joint geometry, quantitative rates, variance, and sample-wise
-convergence remain outside the checked claims.**
+The subsequent smooth one-tip mixed theorem also supplies parametric induced
+Lorentzian joint area for its specific class. Arbitrary null boundaries,
+general induced null-joint geometry, quantitative rates, variance, and
+sample-wise convergence remain outside the checked claims.**
 
 Lean **4.19.0** and mathlib **v4.19.0** are pinned. `lake-manifest.json` pins the
 resolved dependency commits; mathlib is
@@ -1740,9 +1746,13 @@ walks through the same dependencies are eliminated. State is never reused
 between files or runs. The historical timings above describe the older
 per-root traversal. See [the coverage map](PROOF_COVERAGE.md#efficient-verification-without-weakening-the-gate)
 and the [input-pinned validation receipt](receipts/proof-coverage-validation.json)
-for the current gate: 346 Lean files passed in **42:12.05** with two workers
-and a warm library build. The initial cold build/dependency setup is separate;
-this is not a controlled comparison with the historical timings. Real
+for the first optimized batch: 346 Lean files passed in **42:12.05** with two
+workers and a warm library build. The subsequent
+[mixed-limit receipt](receipts/mixed-null-limit-validation.json) records 361
+Lean files and 3,607 public library theorems plus all public definitions in
+**45:48.72**, also with two workers and unchanged proof inputs across the run.
+Initial cold build/dependency setup is separate; these are not controlled
+comparisons with the historical timings. Real
 adversarial tests require the pinned toolchain, but no mathlib build:
 
 ```sh
