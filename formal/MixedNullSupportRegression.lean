@@ -3,6 +3,8 @@ import BoundaryDraft.MixedNullElementary
 import BoundaryDraft.MixedNullFrontier
 import BoundaryDraft.MixedNullWeighted
 import BoundaryDraft.NullGaussianRight
+import BoundaryDraft.MixedNullLimit
+import BoundaryDraft.MixedNullGeometryExamples
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
 
 /-! Independently expanded contracts for geometric and weighted support.
@@ -131,5 +133,36 @@ example : Tendsto (fun ρ : ℝ => (4 / Real.sqrt 6) * Real.sqrt ρ *
     unfold cutoff
     split <;> norm_num
   simpa [cutoff] using nullGaussian_density_limit_right cutoff hm hcont.continuousWithinAt 1 hb
+
+-- Independently restate the original smooth-class hypotheses and original
+-- probability integral. No root, area identity, jet or limit is an input.
+example (H : Spatial → ℝ) (hT : 0 < H 0) (κ : ℝ) (hκ : 0 ≤ κ) (hκ1 : κ < 1)
+    (hLip : ∀ x y : Spatial, |H x - H y| ≤ κ *
+      ‖((WithLp.equiv 2 _).symm (y - x) : EuclideanSpace ℝ (Fin 3))‖)
+    (hSmooth : ContDiff ℝ ⊤ (fun x : EuclideanSpace ℝ (Fin 3) => H x)) :
+    Tendsto (fun ρ : ℝ => ∫ c, discreteBDGAction ρ c
+      ∂FinitePoisson.law (ENNReal.ofReal ρ • volume.restrict
+        {p : Spacetime | -H (spatialPart p) < p 0 ∧
+          p 0 < 0 ∧ spatialSeparationSq p 0 < (0 - p 0) ^ 2}))
+      atTop (𝓝 ((mixedNullJointMeasure H).real univ)) := by
+  have hH : AdmissibleMixedNull H := ⟨⟨hT, κ, hκ, hκ1, hLip⟩, hSmooth⟩
+  exact hH.expectedBDGAction_limit
+
+example : Tendsto (fun ρ : ℝ => continuumMean ρ (mixedNullRegion sineFloor))
+    atTop (𝓝 ((mixedNullJointMeasure sineFloor).real univ)) :=
+  sineFloor_data.continuumMean_limit
+
+example : Tendsto (fun ρ : ℝ => expectedBDGAction ρ (mixedNullRegion affineFloor))
+    atTop (𝓝 ((mixedNullJointMeasure affineFloor).real univ)) :=
+  affineFloor_data.expectedBDGAction_limit
+
+-- This is a cone cap, not the old diamond: the target is four pi T squared.
+example {T : ℝ} (hT : 0 < T) :
+    Tendsto (fun ρ : ℝ => expectedBDGAction ρ (mixedNullRegion (fun _ => T)))
+      atTop (𝓝 (4 * Real.pi * T ^ 2)) := by
+  have h := (mixedNull_constant_admissible hT).expectedBDGAction_limit
+  rw [(mixedNull_constant_admissible hT).toMixedNullData.jointMeasure_real_univ,
+    mixedNullArea_constant hT] at h
+  exact h
 
 end MixedNullSupportRegression
