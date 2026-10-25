@@ -9,6 +9,7 @@ import BoundaryDraft.DimensionKernel
 import BoundaryDraft.DimensionMellin
 import BoundaryDraft.DimensionActionConstants
 import BoundaryDraft.DimensionCancellation
+import BoundaryDraft.ShortRemainderAdapter
 import BoundaryDraft.DimensionRodrigues
 import BoundaryDraft.DimensionSlice
 import BoundaryDraft.DimensionSliceMellin
