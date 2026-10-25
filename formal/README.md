@@ -9,7 +9,10 @@ geometry, Lorentzian induced area, scalar transport and concentration, then
 assembles the deterministic and separate original-law expected limits.
 The [complete-coverage acceptance contract](FULL_COVERAGE_PLAN.md) retains all
 remaining written results, including supporting claims not implied by this
-unweighted limit. Full research coverage is still incomplete.
+unweighted limit. The [current progress ledger](FULL_COVERAGE_PROGRESS.md)
+refreshes the source scope to the newer research integration and accounts for
+every pinned Markdown source without equating source accounting with proofs.
+Full research coverage is still incomplete.
 
 **Status: the general admissible graph-cap deterministic boundary limit,
 the original ellipsoid and null-plane-cap continuum limits, and the concrete

@@ -7,13 +7,20 @@ encoded statements; it does not certify coverage of the written mathematics.
 
 ## Fixed scope
 
-Use mathematical source **S = `9e0068f91c219fe61984d20fdb3f6939eab907c4`**
-and its review presentation **R = `1ad9c9ae1d32b7405062371dbb018db7f30f7bc1`**,
-as explained in [the coverage inventory](PROOF_COVERAGE.md). Retain the checked
-results already integrated at S and the subsequent mixed finite-density and
+The follow-up after #190 explicitly refreshes the mathematical source to
+**I = `113f83d099449221fdacf20a404d57f5939e896d`**, the fetched current research
+integration, including the scoped and incomplete research merged in #180,
+#184 and #187. The [current progress ledger](FULL_COVERAGE_PROGRESS.md) records
+this scope change and the complete Markdown-source roster. It does not turn
+those research-package merges into acceptance of their unresolved theorems.
+
+The earlier source **S = `9e0068f91c219fe61984d20fdb3f6939eab907c4`** and review
+presentation **R = `1ad9c9ae1d32b7405062371dbb018db7f30f7bc1`** remain historical
+pins in [the coverage inventory](PROOF_COVERAGE.md). Retain their checked
+results and the subsequent mixed finite-density and
 [core induced-area limit ports](MIXED_NULL_LIMIT.md).
-Do not restart from the older `main` snapshot. Later mathematical changes need
-an explicit scope update rather than silently changing the acceptance target.
+Do not restart from the older `main` snapshot. Further mathematical changes
+need another explicit scope update rather than silently moving the target.
 
 Coverage includes supporting estimates, geometric identifications, negative
 results and weighted/cutoff statements asserted in those sources, not just the
@@ -31,7 +38,9 @@ Finishing MA3 does not by itself close either whole note. The first detailed
 [MA/NM claim crosswalk](MIXED_NULL_CLAIMS.md) now makes that distinction explicit;
 [additional source families and supporting spines](WRITTEN_SUPPORTING_SPINES.md)
 record further obligations under and beyond the headline table. Neither is
-claimed to be an exhaustive index of every source at S.
+claimed to be an exhaustive index of every source at S, much less at I.
+The new source roster prevents document omissions; it does not yet provide
+that exhaustive statement-level comparison.
 
 Unresolved mathematics remains a separate research queue. In particular, an
 unproved sample-wise limit cannot be inferred from the separately proved
@@ -90,7 +99,9 @@ contradiction is discovered, record it rather than weaken the theorem.
 | K/H/O and quotient families | Klein-bottle, reflection-holonomy and 7D focusing obstructions with complete surviving response; thin/first-cut torus families at every stated dimension | Only thin 4D end-to-end theorem checked |
 | Higher-dimensional Minkowski | A1–A3, dimension-dependent actual overlap jets and critical remainders, 5D/6D short/long transfer and complete target | Scalar kernels and fixed-regulator wedge checked; geometric assembly open |
 | Positive curved long families | RPL/FCDC, Rosen plane wave PW-4 and Hadamard-optical HO-4, including required external geometric inputs at the stated scope | Open |
-| Remaining established null/mixed families | All-dimensional ND, selected two-tip TT-A/TT-B, conformal one-cone CC and regular conformal two-tip CT, with whole unions, masks and all extra strata | Open |
+| Remaining established null/mixed families at S | All-dimensional ND, selected two-tip TT-A/TT-B, conformal one-cone CC and regular conformal two-tip CT, with whole unions, masks and all extra strata | Open |
+| Later curved-3D research at I | C3/F3/M3/CL3/UP3/CR3/PF3 scoped results, conditional reductions and valid negative controls, preserving all physical unions and complete-observable distinctions | Source reconciliation and Lean ports open; PF3.2 and the general theorem remain unresolved mathematics |
+| Later null/mixed research at I | NF/TC/NX/NG/FL/DL/SE/CS successes, NP/IU and SM obstructions, IN/GT/CT reductions and their supporting claims; distinguish the later complementary-trace CT from the conformal two-tip CT above | Source reconciliation and Lean ports open; GA's general construction remains unresolved mathematics |
 
 The source links and exact scope boundaries for these families are in the
 [principal-claim table](PROOF_COVERAGE.md#principal-written-claims-and-the-missing-lean-terms).

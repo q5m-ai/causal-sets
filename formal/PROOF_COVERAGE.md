@@ -13,7 +13,14 @@ not just MA's next end-to-end theorem. The family inventory here is not yet an
 exhaustive statement-by-statement index; that accounting is an explicit open
 completion gate.
 
-The inventory uses these immutable sources:
+**Current follow-up scope:** [FULL_COVERAGE_PROGRESS.md](FULL_COVERAGE_PROGRESS.md)
+explicitly extends the target to research integration
+`113f83d099449221fdacf20a404d57f5939e896d`, including later #180/#184/#187 material.
+The tables and receipts below retain their original source pins; they are not
+an inventory of all that later research. The new source roster is an accounting
+guard, not a claim of complete statement correspondence or proof coverage.
+
+This historical inventory uses these immutable sources:
 
 - Mathematical integration **S = `9e0068f91c219fe61984d20fdb3f6939eab907c4`**,
   on `issue-81-general-coverage`. All pre-existing files below are read at S.
