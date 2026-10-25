@@ -22,8 +22,11 @@ complete causal-set dynamics has been found.
 
 **Proof inventory:** the [source-pinned mathematical/Lean coverage map](formal/PROOF_COVERAGE.md)
 separates checked restricted results, written-only manuscript claims, and
-unresolved mathematics. It records the new mixed-region finite-density proof,
-the remaining formalization work, and the efficient full-audit method.
+unresolved mathematics. The [smooth one-tip mixed port](formal/MIXED_NULL_LIMIT.md)
+now derives the induced-area deterministic and original-law expected limits.
+The [complete-coverage acceptance contract](formal/FULL_COVERAGE_PLAN.md) keeps
+all remaining written claims and supporting results in scope; this milestone
+is not complete research coverage.
 
 ## Why “emergence”?
 
@@ -434,8 +437,12 @@ proves the complete region/stratum geometry and global induced-area limit,
 then uses an exact positive-density Poisson identity to obtain the expected-action
 limit. Independent finite-order and positive-layer quadrature regressions
 check the normalization without defining expectation from the reduced action.
-This is a written proof, not a new Lean-checked mixed-region theorem or an
-independently reviewed result. The later [dimensional cone-ending proof](notes/null-cone-dimensions.md)
+That note records a written argument. The subsequent
+[Lean port](formal/MIXED_NULL_LIMIT.md) supplies the core unweighted deterministic
+and original-law expected limits for its entire smooth class, with independent
+induced joint geometry. Its weighted asymptotic/tip estimates and other
+ancillary statements are not all ported; independent human review remains
+separate. The later [dimensional cone-ending proof](notes/null-cone-dimensions.md)
 extends its stated flat cone class to every integer dimension at least two;
 it does not prove arbitrary null/mixed geometry.
 

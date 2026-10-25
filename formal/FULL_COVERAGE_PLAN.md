@@ -10,7 +10,8 @@ encoded statements; it does not certify coverage of the written mathematics.
 Use mathematical source **S = `9e0068f91c219fe61984d20fdb3f6939eab907c4`**
 and its review presentation **R = `1ad9c9ae1d32b7405062371dbb018db7f30f7bc1`**,
 as explained in [the coverage inventory](PROOF_COVERAGE.md). Retain the checked
-results already integrated at S and the subsequent mixed finite-density port.
+results already integrated at S and the subsequent mixed finite-density and
+[core induced-area limit ports](MIXED_NULL_LIMIT.md).
 Do not restart from the older `main` snapshot. Later mathematical changes need
 an explicit scope update rather than silently changing the acceptance target.
 
@@ -26,7 +27,11 @@ index.** Each family below therefore needs both an inventory pass and a proof
 pass. An equation label alone is not necessarily a theorem, and unnumbered
 claims also need accounting. For example, the mixed assembly includes MA11–MA15,
 not only the MA1–MA10 limit spine; the general short note also includes S31.
-Finishing MA3 does not by itself close either whole note.
+Finishing MA3 does not by itself close either whole note. The first detailed
+[MA/NM claim crosswalk](MIXED_NULL_CLAIMS.md) now makes that distinction explicit;
+[additional source families and supporting spines](WRITTEN_SUPPORTING_SPINES.md)
+record further obligations under and beyond the headline table. Neither is
+claimed to be an exhaustive index of every source at S.
 
 Unresolved mathematics remains a separate research queue. In particular, an
 unproved sample-wise limit cannot be inferred from the separately proved
@@ -73,13 +78,14 @@ contradiction is discovered, record it rather than weaken the theorem.
 | Batch | Required completion | Status |
 | --- | --- | --- |
 | Existing checked foundation | Preserve the graph, ellipsoid, null-plane cap, combined/independent two-face, flat 2D/3D, thin 4D torus and probability results listed in the inventory; map their supporting written claims | Proofs checked; exhaustive source correspondence still required |
-| Mixed one-tip theorem | Whole smooth MA class; actual radial geometry, induced Lorentzian joint area, actual scalar transport, deterministic limit and separate expected limit | Finite-density reduction checked; geometry and concentration in progress |
-| Mixed supporting note closure | MA4 complete frontier/strata and nullity, quantitative MA5, MA7 ancillary geometry, MA9 actual weight representation, MA11 weighted generator/partition response, MA12 uniform tip control, MA13–MA15 specialized probability statements; NM estimates and nonvacuity/calibrations | Open; do not infer from the unweighted limit |
+| Mixed one-tip theorem | Whole smooth MA class; actual radial geometry, induced Lorentzian joint area, actual scalar transport, deterministic limit and separate expected limit | Proved; [full local gate passed](MIXED_NULL_LIMIT.md) on frozen inputs |
+| Mixed supporting note closure | MA4/MA7 ancillary smooth-face/normal facts, MA9 particular global weight representation/bounds, MA11/NM quantitative weighted generator response, MA12/NM uniform tip/collar control, complete MA13–MA14 moment/layer correspondence | Open; exact closure/frontier/nullity, quantitative MA5, actual action integrability/expectation and finite signed measurable partitions are now supplied |
 | Shared curved short spine | S1–S8 physical interval/measure, S9–S18 derivative/contact bounds, S19 full cone, S20–S25 face, S26–S29 joint, S30 full assembly and S31 specialization | Open |
 | Controlled curved two-face pilot | Actual curved interval, short/long producers, cutoff compensation and independent curvature/joint target for the stated fixed metric | Finite-density expectation checked; limit open in Lean |
+| Nonpolynomial curved two-face N | N1–N29's fixed nonpolynomial factor, actual phase/short/long producers, weighted C5 endpoint-field assembly and unit-field expected limit | Open; not the fixed polynomial-density pilot |
 | C2 | Every stated curved 2D G-SS member, actual weighted rectangle unions and long remainder, global target and expected limit | Open beyond the checked flat subclass |
 | FLAT positive clause | Every stated flat G-SS member in dimensions 2–4, physical lifted unions counted once and complete target restoration | Open beyond restricted coordinate/quotient classes |
-| SW and sphere/circle dependencies | Every stated smooth positive conformal factor, actual weighted lenses, both orientations/endpoints and closing-fibre estimates | Measured-order foundation checked; asymptotics open |
+| SW, RC and sphere/circle dependencies | Every stated SW smooth positive factor; explicit RC1–RC17 correspondence and conditional power criterion; F/SC/SA cut, complement and fixed normalization statements | Measured-order foundation checked; asymptotics open |
 | CO | Actual compact-torus geometry, all minimizing paths, CO13 physical model-to-action matching, all complements, negative complete-action growth and independent target | Open; arithmetic model certificate is not completion |
 | K/H/O and quotient families | Klein-bottle, reflection-holonomy and 7D focusing obstructions with complete surviving response; thin/first-cut torus families at every stated dimension | Only thin 4D end-to-end theorem checked |
 | Higher-dimensional Minkowski | A1–A3, dimension-dependent actual overlap jets and critical remainders, 5D/6D short/long transfer and complete target | Scalar kernels and fixed-regulator wedge checked; geometric assembly open |
@@ -98,18 +104,18 @@ Its radial set, supremum radius, spacetime joint, parameterization and candidate
 area are defined without reference to the action. **Definitions alone prove
 none of their geometric properties.** In particular:
 
-- [ ] Prove the unique positive radial root, uniform bounds and exact radial
+- [x] Prove the unique positive radial root, uniform bounds and exact radial
   domain; derive continuity and the smooth regularity needed for joint area.
-- [ ] Prove the parameterization reaches exactly the actual spacetime joint,
+- [x] Prove the parameterization reaches exactly the actual spacetime joint,
   with no multiplicity; derive its differential and positive Lorentzian Gram
   determinant, not the ambient Euclidean spacetime-area density.
-- [ ] Justify the measure/area interpretation and the independent spatial
+- [x] Justify the measure/area interpretation and the independent spatial
   integral identity. The intermediate `mixedNullSpatialLimit` is not itself a
   substitute geometric target.
-- [ ] Derive actual finite-density coordinate transport, measurable weights,
+- [x] Derive actual finite-density coordinate transport, measurable weights,
   integrable domination and concentration. The one-sided Gaussian helper must
   be instantiated with these producers, not treated as their proof.
-- [ ] Assemble the deterministic and original-law expected limits, and check
+- [x] Assemble the deterministic and original-law expected limits, and check
   the entire smooth class rather than only constants or a sine floor.
 - [ ] Close the additional mixed-note statements listed above separately.
 
