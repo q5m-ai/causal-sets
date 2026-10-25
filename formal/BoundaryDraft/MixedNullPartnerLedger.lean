@@ -1,4 +1,4 @@
-import BoundaryDraft.MixedNullCoareaTransport
+import BoundaryDraft.MixedNullErrorExtension
 
 /-!
 # The actual NM11 partner-cutoff ledger
@@ -217,6 +217,28 @@ theorem cutoff_ledger_partition {ι : Type*} (s : Finset ι) {ρ : ℝ} (hρ : 0
       intro i hi
       exact hH.cutoff_ledger ρ (hw i hi) (hb i hi) (hχ i hi) (hχb i hi)
     _ = _ := hH.weightedContinuumMean_partition s hρ w C hw hb hs
+
+/-- The actual full-ledger remainder satisfies NM7, with only the written
+local value/time bounds. No estimate for the long entry alone is claimed. -/
+theorem cutoff_remainder_bound {w : Spacetime → ℝ} (hw : Measurable w)
+    {M L k s ρ : ℝ} (hM : 0 ≤ M) (hb : MixedNullWeightBound H w M)
+    (hL : 0 ≤ L) (ht : MixedNullTimeLipschitz H w L)
+    (hk : 0 ≤ k) (hk1 : k < 1)
+    (hLip : ∀ x y : JointSpace, |H x - H y| ≤ k * ‖x - y‖)
+    (hs : 0 < s) (hsT : s ≤ H 0 ^ 2 / 4) (hρ : 0 < ρ)
+    {χ : Spacetime → Spacetime → ℝ}
+    (hχ : Measurable (fun p : Spacetime × Spacetime => χ p.1 p.2))
+    (hχb : ∀ p ∈ mixedNullRegion H, ∀ q ∈ mixedNullRegion H ∩ causalFuture p,
+      0 ≤ χ p q ∧ χ p q ≤ 1) :
+    ‖mixedNullCutoffRemainder H ρ w χ‖ ≤
+      4 * mixedNullWeightedError (H 0) k M L s + 8 * M * Real.pi * (H 0 / (1 - k)) ^ 2 *
+        mixedNullErfc (Real.sqrt ((Real.pi / 24) * ρ) * s) := by
+  have hbM : ∀ p ∈ mixedNullRegion H, ‖w p‖ ≤ M := by
+    intro p hp
+    rw [← clipWeight_eq_on_region hb hp]
+    exact mixedNullClipWeight_bound hM w p
+  rw [hH.cutoff_remainder_eq ρ hw hbM hχ hχb]
+  exact hH.weightedContinuumMean_error_local hw hM hb hL ht hk hk1 hLip hs hsT hρ
 
 end MixedNullData
 end BoundaryDraft

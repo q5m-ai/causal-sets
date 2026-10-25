@@ -143,6 +143,10 @@ import BoundaryDraft.MixedNullCoareaTransport
 import BoundaryDraft.MixedNullProbabilityLayers
 import BoundaryDraft.MixedNullGeneratorTransport
 import BoundaryDraft.MixedNullPartnerLedger
+import BoundaryDraft.MixedNullErrorExtension
+import BoundaryDraft.MixedNullCollar
+import BoundaryDraft.MixedNullTipLocal
+import BoundaryDraft.MixedNullSineGeometry
 import BoundaryDraft.SpacetimeSprinkling
 import BoundaryDraft.FiniteCausalOrder
 import BoundaryDraft.DiscreteBDG

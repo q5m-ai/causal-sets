@@ -85,4 +85,19 @@ example {H : Spatial → ℝ} (hH : MixedNullData H) {ρ : ℝ} (hρ : 0 < ρ)
     (fun i _ => pairCutoff_measurable (ε i))
     (fun i _ p _ q _ => pairCutoff_bounds (ε i) p q) hs
 
+-- NM7 bounds the actual ledger error after the full complement is restored;
+-- this is not a separate long-pair estimate.
+example {H : Spatial → ℝ} (hH : MixedNullData H) {w : Spacetime → ℝ} (hw : Measurable w)
+    {M L k s ρ : ℝ} (hM : 0 ≤ M) (hb : MixedNullWeightBound H w M)
+    (hL : 0 ≤ L) (ht : MixedNullTimeLipschitz H w L)
+    (hk : 0 ≤ k) (hk1 : k < 1)
+    (hLip : ∀ x y : JointSpace, |H x - H y| ≤ k * ‖x - y‖)
+    (hs : 0 < s) (hsT : s ≤ H 0 ^ 2 / 4) (hρ : 0 < ρ) (ε : ℝ) :
+    ‖mixedNullCutoffShort H ρ w (pairCutoff ε) + mixedNullCutoffLong H ρ w (pairCutoff ε) -
+      4 * mixedNullWeightedGlobalWeight H w 0‖ ≤
+      4 * mixedNullWeightedError (H 0) k M L s + 8 * M * Real.pi * (H 0 / (1 - k)) ^ 2 *
+        mixedNullErfc (Real.sqrt ((Real.pi / 24) * ρ) * s) :=
+  hH.cutoff_remainder_bound hw hM hb hL ht hk hk1 hLip hs hsT hρ
+    (pairCutoff_measurable ε) (fun p _ q _ => pairCutoff_bounds ε p q)
+
 end MixedNullPartnerLedgerRegression
