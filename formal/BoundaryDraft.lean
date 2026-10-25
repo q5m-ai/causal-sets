@@ -141,6 +141,8 @@ import BoundaryDraft.MixedNullGeometryExamples
 import BoundaryDraft.MixedNullFaces
 import BoundaryDraft.MixedNullCoareaTransport
 import BoundaryDraft.MixedNullProbabilityLayers
+import BoundaryDraft.MixedNullGeneratorTransport
+import BoundaryDraft.MixedNullPartnerLedger
 import BoundaryDraft.SpacetimeSprinkling
 import BoundaryDraft.FiniteCausalOrder
 import BoundaryDraft.DiscreteBDG
