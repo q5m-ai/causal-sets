@@ -475,9 +475,11 @@
         "CS8a",
         "CS9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-contact-long.md",
@@ -646,9 +648,11 @@
         "CL3.8",
         "CL3.9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-three-d-critical.md",
@@ -675,9 +679,11 @@
         "CR3.8",
         "CR3.9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-three-d-focusing.md",
@@ -693,9 +699,11 @@
         "F3.7",
         "F3.8"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-three-d-matching.md",
@@ -713,9 +721,11 @@
         "M3.8",
         "M3.9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-three-d-phase-freeze.md",
@@ -731,9 +741,11 @@
         "PF3.7",
         "PF3.8"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-three-d-response.md",
@@ -750,9 +762,11 @@
         "C3.8",
         "C3.9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-three-d-union.md",
@@ -777,9 +791,11 @@
         "UP3.8",
         "UP3.9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/curved-two-d-limit.md",
@@ -1402,9 +1418,11 @@
         "GT8",
         "GT9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/geometric-long-cancellation.md",
@@ -1509,9 +1527,11 @@
         "IN8",
         "IN9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/intrinsic-coverage-ledger.md",
@@ -1541,9 +1561,11 @@
         "IU8",
         "IU9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/issue-151-resolution.md",
@@ -1633,9 +1655,11 @@
         "NX8",
         "NX9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-closure-audit.md",
@@ -1646,9 +1670,11 @@
         "NA2",
         "NA3"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-complementary-trace.md",
@@ -1665,9 +1691,11 @@
         "CT8",
         "CT9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-complete-gluing.md",
@@ -1688,9 +1716,11 @@
         "NG8",
         "NG9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-cone-dimensions.md",
@@ -1723,9 +1753,11 @@
         "FL5",
         "FL6"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-general-theorem-attempt.md",
@@ -1738,9 +1770,11 @@
         "GA4",
         "GA5"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-mixed-assembly.md",
@@ -1780,9 +1814,11 @@
         "NT3",
         "NT4"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-mixed-estimates.md",
@@ -1838,27 +1874,33 @@
         "NP8",
         "NP9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-proof-spine.md",
       "blob": "b6cf0ad43573fb466227768f63eafcaf10ca1a1c",
       "sha256": "640380cdcc2cb836b3049122a3d72452f1fa370ea2b52c69036959188320a968",
       "tex_tags": [],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-research-handoff.md",
       "blob": "9e9bb9d7d7bb3b6007194278673e94d687b5b7e6",
       "sha256": "dbb1071795e17596b473a13e017fd881eab6908ead4ac920c152d5c97dbad0d0",
       "tex_tags": [],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-singular-end-audit.md",
@@ -1878,9 +1920,11 @@
         "SE6",
         "SE7"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-suspension-matching.md",
@@ -1897,9 +1941,11 @@
         "SM8",
         "SM9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-tangency-matching.md",
@@ -1915,9 +1961,11 @@
         "TC7",
         "TC8"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/null-two-dimensional-gluing.md",
@@ -1933,9 +1981,11 @@
         "DL7",
         "DL8"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/proof-spine-page.md",
@@ -1974,9 +2024,11 @@
         "NF8",
         "NF9"
       ],
-      "review_state": "pending",
-      "indexes": [],
-      "reason": "Numbered and unnumbered assertions still require source-level classification and theorem correspondence."
+      "review_state": "partial",
+      "indexes": [
+        "formal/LATER_INTEGRATION_CLAIMS.md"
+      ],
+      "reason": "Family-level source review distinguishes asserted, conditional, negative and unresolved results. Exhaustive numbered and unnumbered claim correspondence remains open."
     },
     {
       "path": "notes/regulated-tangent-wedge.md",

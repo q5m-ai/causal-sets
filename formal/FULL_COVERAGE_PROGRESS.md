@@ -46,7 +46,9 @@ python3 check_written_coverage.py
 python3 -m unittest -v test_check_written_coverage
 ```
 
-It does **not** verify mathematical statements, declaration types, proof terms,
+GitHub's `math-authoring` job fetches the exact source commit (also on a shallow
+PR checkout), then runs the roster check and its adversarial tests. It does
+**not** verify mathematical statements, declaration types, proof terms,
 coverage percentages or the truth of a review classification. In particular,
 `indexed` would mean an explicit claim index exists, not that its claims are
 proved. Most sources remain `pending`. An exclusion needs a stated reason;
@@ -83,24 +85,56 @@ source by source, including corrections to earlier attempts.
 | [Geometric critical trace](https://github.com/q5m-ai/causal-sets/blob/113f83d099449221fdacf20a404d57f5939e896d/notes/geometric-critical-trace.md), [complementary trace](https://github.com/q5m-ai/causal-sets/blob/113f83d099449221fdacf20a404d57f5939e896d/notes/null-complementary-trace.md), and [independent null investigation](https://github.com/q5m-ai/causal-sets/blob/113f83d099449221fdacf20a404d57f5939e896d/notes/independent-null-investigation.md) | Clock/coarea, density-jet stability, conditional suspension pairing and critical Abel replacement are reusable but scoped reductions. They do not supply the missing general contact-extraction theorem. |
 | [General theorem attempt](https://github.com/q5m-ai/causal-sets/blob/113f83d099449221fdacf20a404d57f5939e896d/notes/null-general-theorem-attempt.md) | Preserve the unfilled construction and failed approaches as unresolved research, not a universal theorem or a proof of impossibility. Separate any valid subsidiary identities from the failed conclusion. |
 
-This table is a source-scope correction and reading queue, **not an exhaustive
-claim index**. It supplements, rather than erases, the earlier CO/FLAT/SW/C2,
-S1–S31, N/RC/F/SC/SA, higher-dimensional, quotient and mixed obligations.
+The [later-integration family reconciliation](LATER_INTEGRATION_CLAIMS.md)
+now individually accounts for all 26 added notes, their source-qualified display
+ranges, valid scoped/conditional results, negative controls and unresolved
+outputs. Its two planning reviews agreed on weighted MA/NM closure as the next
+concrete analytic priority; neither claimed exhaustive statement coverage or
+independent mathematical acceptance.
+
+These tables are a source-scope correction and reading queue, **not an
+exhaustive claim index**. They supplement, rather than erase, the earlier
+CO/FLAT/SW/C2, S1–S31, N/RC/F/SC/SA, higher-dimensional, quotient and mixed
+obligations.
 
 ## Current proof work
 
-Two independent missing-producer batches are under implementation:
+The following modules now pass targeted warnings-as-errors compilation and the
+parent's integrated incremental checker against #190's merge base. All proof
+workers have frozen their files. The final all-source gate is still pending;
+the incremental run took **3:59.68** and is not that full audit.
 
-1. MA9's actual global coarea weight: definition, exact disintegration,
-   endpoint, support, bounds and right limit. The previously proved spatial
-   Gaussian limit did not establish these separate formulas.
-2. MA13/MA14's explicit original-law moments and layer identities, including
-   support/simplicity and the actual restricted interval rate. Existing generic
-   probability foundations must be specialized with the original normalization.
+| Written obligation | Actual new producer and precise boundary |
+| --- | --- |
+| MA9/MA10, NM4 | `MixedNullCoarea*`: the actual global weight, exact angular/radial disintegration, finite-density identity, literal rescaling, endpoint, support, bounds and right continuity. Signed measurable NM4 transport retains time dependence and all partners. `MixedNullErrorExtension` constructs a bounded auxiliary extension and proves it changes neither the actual coarea density nor either action term; only local closed-fibre bounds are needed. |
+| MA13–MA15 | `MixedNullProbability*`: original-law support/simplicity, real first/second factorial moments, actual endpoint-excluded interval rate, expanded per-layer expectations and exact normalization. Original-coordinate null intervals/pairs are separately proved null; closed order remains in the discrete action. A separate normalized conditional-iid presentation is not identified here. |
+| S13 scalar step | `ShortRemainderAdapter`: even/odd quantitative power/logarithmic bounds imply little-o at the **real** half-dimension and normalized signed cancellation, with nonzero dimension 2–6 controls. This does not produce S9–S12's geometric estimates. |
+| MA/NM face support | `MixedNullFaces`: actual smooth lower-face differential, singular upper tip, future timelike/null normals, positive pairing/nonparallelism, nonzero joint-level differential, closed radial support and quantitative growth. A complete manifold-with-boundary atlas is separate. |
+| NM5–NM7 | `MixedNullErrorGeometry`, `MixedNullErrorIntegrals`, `MixedNullWeightedError`, `MixedNullErrorRegularity`, `MixedNullWeightedGaussian` and `MixedNullErrorExtension`: the actual moving shell, logarithmic Jacobian and time errors, with literal constants and endpoints; the calculated error's monotonicity/right limit; Gaussian mass four and its actual normalized tail; local-bound weighted scalar errors and limits. No connected radial-slice premise or global bound on the original weight is introduced. |
+| MA11/NM8 smooth scope | `MixedNullGenerator`, `MixedNullGeneratorTransport` and `MixedNullGeneratorLocal`: bounded-tip control, actual total generator derivative, independent endpoint integration by parts, generator-constant angular weights, affine/nonaffine C1 coordinate transport with all terms and artificial endpoints, and the original-action generator formula for **every C1 spacetime weight**, with compactness supplying local bounds. General absolutely-continuous traces remain separate debt. |
+| NM9 | `MixedNullTip` and `MixedNullTipLocal`: density-uniform source-cylinder bound with local original-weight bounds, genuine ambient tip neighborhood, and nonzero fixed positive cylinder response, after complete signed partner cancellation. |
+| NM10 | `MixedNullCollar`: actual sharp radial collar, fixed-width limit, quantitative response bound, subsequent shrinking-width limit, and the strictly positive complementary full-partner response. This formally refutes discarding that source complement, not the full-region convergence theorem. |
+| NM11 | `MixedNullPartnerLedger`: integrability of bounded measurable pair cutoffs, exact short/complement restoration with the point term once, actual remainder identity and quantitative bound, and finite source partitions. No separate long-term vanishing is assumed or concluded. |
+| NM sine example | `MixedNullSineGeometry`: nonzero second derivative at a genuine interior lower-face spatial point and two unequal joint radii. Global nonaffinity alone did not supply these witnesses. Spacetime remains flat. |
+
+Parent statement review compared these declarations with the actual source
+formulas and inspected their producer proofs. The MA, NM and general-metric
+short-remainder source blobs are unchanged between the implementation branch
+and I. Independently expanded regressions include sharp radial/angular weights,
+actual unbounded coordinate time with a nonzero signed limit, endpoint cases,
+negative exterior heights, slices with axis holes, supported null chains,
+nonlinear reparameterizations, and the nonaffine sine floor.
+
+Remaining mixed obligations include the **general absolutely-continuous-trace
+FTC**, a complete smooth-face atlas, further partition/derivative identities,
+and NM12's full finite-sigma primitive and remaining calibration/normalization
+correspondences. A C1 theorem is not relabelled as the broader AC statement.
+The full supporting-claim inventory still needs reconciliation beyond these
+identified producers; source-roster and theorem counts are not coverage
+percentages. The broader family queue and genuine research blockers above
+remain unchanged.
 
 These are dependency steps, not a replacement definition of full coverage.
-Their results will be recorded only after targeted checking and integration;
-a new full local all-source audit is required after the final Lean change.
-The existing #190 receipt certifies its unchanged inputs only. No new proof
-verification, issue closure, deployment or independent human acceptance is
-claimed by this initial scope update.
+A new full local all-source audit is required after the final Lean change.
+The existing #190 receipt certifies its unchanged inputs only. No complete
+coverage, issue closure, deployment or independent human acceptance is claimed.

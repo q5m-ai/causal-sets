@@ -42,6 +42,8 @@ def git_bytes(root: Path, *args: str) -> bytes:
 def source_blobs(root: Path, commit: str) -> dict[str, str]:
     if not isinstance(commit, str) or not SHA.fullmatch(commit):
         raise CoverageError("source_commit must be a full, lowercase Git SHA")
+    if git_bytes(root, "cat-file", "-t", commit).strip() != b"commit":
+        raise CoverageError("source_commit must name a commit, not a tree or blob")
     files = {}
     for entry in git_bytes(root, "ls-tree", "-rz", "--full-tree", commit).split(b"\0"):
         if not entry:

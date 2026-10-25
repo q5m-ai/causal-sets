@@ -77,6 +77,10 @@ class WrittenCoverageTests(unittest.TestCase):
     def test_moving_ref_rejected(self):
         self.reject("full, lowercase Git SHA", lambda d: d.update(source_commit="HEAD"))
 
+    def test_tree_is_not_a_commit_pin(self):
+        tree = self.git("rev-parse", "HEAD^{tree}").strip()
+        self.reject("must name a commit", lambda d: d.update(source_commit=tree))
+
     def test_stale_blob(self):
         self.reject("stale Git blob", lambda d: d["sources"][0].update(blob="0" * 40))
 
