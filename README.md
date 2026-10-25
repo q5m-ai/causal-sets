@@ -20,6 +20,11 @@ complete causal-set dynamics has been found.
 > verification checks the encoded statements; it does not establish novelty,
 > physical applicability, or assumptions that have not yet been formalized.
 
+**Proof inventory:** the [source-pinned mathematical/Lean coverage map](formal/PROOF_COVERAGE.md)
+separates checked restricted results, written-only manuscript claims, and
+unresolved mathematics. It records the new mixed-region finite-density proof,
+the remaining formalization work, and the efficient full-audit method.
+
 ## Why “emergence”?
 
 A causal set begins with very little: discrete elements, causal order, and local

@@ -1,5 +1,12 @@
 # Lean verification: checked components and explicit targets
 
+For a source-pinned comparison with the **whole written research programme**,
+see the [claim-to-Lean coverage map](PROOF_COVERAGE.md). It distinguishes the
+restricted checked limits from the written manuscript theorems, unresolved
+mathematics, and the remaining port plan. The new one-tip mixed module proves
+its actual finite-density reduction and separate expectation equality, **not**
+yet its induced-area limit.
+
 **Status: the general admissible graph-cap deterministic boundary limit,
 the original ellipsoid and null-plane-cap continuum limits, and the concrete
 ellipsoid's Lorentzian angle/surface-integral interpretation are proved in Lean.
@@ -1725,6 +1732,20 @@ unimported unexpected axiom and a compiler error reported both failures and
 skipped the aggregate audit. No uncached dependency-download or cold-cache
 baseline was measured, and no cross-run audit caching or fleet distribution
 has been added.
+
+**Current audit optimization:** both per-source and aggregate audits now share
+Lean's `CollectAxioms.State` visited set across roots within one environment.
+Every public root and every reachable dependency is still checked; repeated
+walks through the same dependencies are eliminated. State is never reused
+between files or runs. The historical timings above describe the older
+per-root traversal. See [the coverage map](PROOF_COVERAGE.md#efficient-verification-without-weakening-the-gate)
+and the new validation receipt for the current gate and measured run. Real
+adversarial tests require the pinned toolchain, but no mathlib build:
+
+```sh
+# From the repository root:
+python3 -m unittest -v test_formal_check test_formal_axioms
+```
 
 An optional task-local Lean 4.19.0 distribution can be installed at
 `.tools/lean-4.19.0-linux/`; `check.sh` detects it without changing global
