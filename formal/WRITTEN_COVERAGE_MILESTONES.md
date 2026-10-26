@@ -34,8 +34,10 @@ The implemented proof batch passed the full local gate at
 theorems and all public definitions. See the
 [receipt](receipts/written-support-validation.json). Later documentation-only
 scope changes do not alter its proof inputs. Applicable CI must still be
-checked on the final PR head. This scope decision is not a new review receipt
-or merge authorization; #191 remains draft pending a separate readiness decision.
+checked on the final PR head. This scope decision is not a review receipt or
+merge authorization. Current readiness, feedback and CI status are recorded on
+[#191](https://github.com/q5m-ai/causal-sets/pull/191), separately from the frozen
+proof-audit receipt.
 
 Acceptance for this milestone is the faithful implemented correspondence,
 regressions and unchanged full-audit rule, not completion of either mixed note
