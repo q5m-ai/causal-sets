@@ -185,6 +185,11 @@ estimates and ancillary statements listed in the table remain separate.
 The [detailed claim crosswalk](MIXED_NULL_CLAIMS.md) distinguishes definitions,
 actual proofs, partial results, available baseline specializations and genuine
 remaining producers for both numbered displays and associated prose.
+The later [supporting-producer delta](MIXED_NULL_SUPPORT_CLAIMS.md) records the
+subsequent actual global weights, quantitative weighted estimates, C1 generator
+formula, tip/collar/complement responses, partner ledger, face geometry and
+original-law probability specializations. The older crosswalk retains its
+frozen Lean comparison; neither record claims whole-note completion.
 
 ## Minimal dependency DAG and finite port plan
 

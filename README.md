@@ -26,7 +26,10 @@ unresolved mathematics. The [smooth one-tip mixed port](formal/MIXED_NULL_LIMIT.
 now derives the induced-area deterministic and original-law expected limits.
 The [complete-coverage acceptance contract](formal/FULL_COVERAGE_PLAN.md) keeps
 all remaining written claims and supporting results in scope; this milestone
-is not complete research coverage.
+is not complete research coverage. The subsequent
+[supporting-producer delta](formal/MIXED_NULL_SUPPORT_CLAIMS.md) records weighted
+estimates, generator and cutoff responses, face geometry and explicit
+original-law moments/layers, while retaining the remaining obligations.
 
 ## Why “emergence”?
 

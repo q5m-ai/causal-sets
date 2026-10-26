@@ -99,10 +99,12 @@ obligations.
 
 ## Current proof work
 
-The following modules now pass targeted warnings-as-errors compilation and the
-parent's integrated incremental checker against #190's merge base. All proof
-workers have frozen their files. The final all-source gate is still pending;
-the incremental run took **3:59.68** and is not that full audit.
+The following modules pass targeted warnings-as-errors compilation, the
+parent's integrated incremental checker against #190's merge base, and the
+**full local all-source audit** at frozen input commit
+`d65b537235ce1e38ec27b74a88441905d1f4f354`. The incremental run took
+**3:59.68**; the distinct full audit took **49:29.45**. Evidence and boundaries
+are recorded below.
 
 | Written obligation | Actual new producer and precise boundary |
 | --- | --- |
@@ -111,14 +113,16 @@ the incremental run took **3:59.68** and is not that full audit.
 | S13 scalar step | `ShortRemainderAdapter`: even/odd quantitative power/logarithmic bounds imply little-o at the **real** half-dimension and normalized signed cancellation, with nonzero dimension 2–6 controls. This does not produce S9–S12's geometric estimates. |
 | MA/NM face support | `MixedNullFaces`: actual smooth lower-face differential, singular upper tip, future timelike/null normals, positive pairing/nonparallelism, nonzero joint-level differential, closed radial support and quantitative growth. A complete manifold-with-boundary atlas is separate. |
 | NM5–NM7 | `MixedNullErrorGeometry`, `MixedNullErrorIntegrals`, `MixedNullWeightedError`, `MixedNullErrorRegularity`, `MixedNullWeightedGaussian` and `MixedNullErrorExtension`: the actual moving shell, logarithmic Jacobian and time errors, with literal constants and endpoints; the calculated error's monotonicity/right limit; Gaussian mass four and its actual normalized tail; local-bound weighted scalar errors and limits. No connected radial-slice premise or global bound on the original weight is introduced. |
-| MA11/NM8 smooth scope | `MixedNullGenerator`, `MixedNullGeneratorTransport` and `MixedNullGeneratorLocal`: bounded-tip control, actual total generator derivative, independent endpoint integration by parts, generator-constant angular weights, affine/nonaffine C1 coordinate transport with all terms and artificial endpoints, and the original-action generator formula for **every C1 spacetime weight**, with compactness supplying local bounds. General absolutely-continuous traces remain separate debt. |
+| MA11/NM8 smooth scope | `MixedNullGenerator`, `MixedNullGeneratorTransport` and `MixedNullGeneratorLocal`: bounded-tip control, actual total generator derivative, independent endpoint integration by parts, supplied generator-constant angular extensions, affine/nonaffine C1 coordinate transport with all terms and artificial endpoints at its stated weight scope, and the original-action generator formula for **every C1 spacetime weight**, with compactness supplying local bounds. General absolutely-continuous traces remain separate debt. |
 | NM9 | `MixedNullTip` and `MixedNullTipLocal`: density-uniform source-cylinder bound with local original-weight bounds, genuine ambient tip neighborhood, and nonzero fixed positive cylinder response, after complete signed partner cancellation. |
 | NM10 | `MixedNullCollar`: actual sharp radial collar, fixed-width limit, quantitative response bound, subsequent shrinking-width limit, and the strictly positive complementary full-partner response. This formally refutes discarding that source complement, not the full-region convergence theorem. |
 | NM11 | `MixedNullPartnerLedger`: integrability of bounded measurable pair cutoffs, exact short/complement restoration with the point term once, actual remainder identity and quantitative bound, and finite source partitions. No separate long-term vanishing is assumed or concluded. |
 | NM sine example | `MixedNullSineGeometry`: nonzero second derivative at a genuine interior lower-face spatial point and two unequal joint radii. Global nonaffinity alone did not supply these witnesses. Spacetime remains flat. |
 
-Parent statement review compared these declarations with the actual source
-formulas and inspected their producer proofs. The MA, NM and general-metric
+The [supporting-claim delta](MIXED_NULL_SUPPORT_CLAIMS.md) maps the new producers
+to their source assertions, retaining exact scope and additional debt. Parent
+statement review compared these declarations with the actual source formulas
+and inspected their producer proofs. The MA, NM and general-metric
 short-remainder source blobs are unchanged between the implementation branch
 and I. Independently expanded regressions include sharp radial/angular weights,
 actual unbounded coordinate time with a nonzero signed limit, endpoint cases,
@@ -135,6 +139,37 @@ percentages. The broader family queue and genuine research blockers above
 remain unchanged.
 
 These are dependency steps, not a replacement definition of full coverage.
-A new full local all-source audit is required after the final Lean change.
-The existing #190 receipt certifies its unchanged inputs only. No complete
-coverage, issue closure, deployment or independent human acceptance is claimed.
+No complete coverage, issue closure, deployment or independent human
+acceptance is claimed.
+
+## Frozen-input verification receipt
+
+The [new receipt](receipts/written-support-validation.json) and its compressed
+log/input inventory record the full check completed **2026-10-26T00:38:58Z**:
+
+- **394 local Lean sources:** 393 isolated source checks, then the aggregate;
+  **3,872 public library theorems and all public definitions** audited. These
+  counts measure the checked checkout, not written-claim coverage.
+- Command: `cd formal && LEAN_NUM_THREADS=2 ./check.sh`, two workers, exit zero,
+  **49:29.45** elapsed, largest single-process RSS **2,908,268 KiB**.
+- Warnings as errors and the unchanged transitive whitelist:
+  `propext`, `Classical.choice`, `Quot.sound`.
+- All **398** formal-input fingerprints, **nine** clean pinned dependencies,
+  the Lean binary and checkout identity matched before and after the run.
+  The last Lean-source commit is
+  `3fb9fdf7d0ea02c9d051788290426363685460d9`; the frozen audited checkout is
+  `d65b537235ce1e38ec27b74a88441905d1f4f354`.
+- **54** authoring/source-roster/checker tests, including eight real pinned-Lean
+  adversarial cases; **23** relevant mixed/Poisson diagnostics; all **132** source
+  identities; **106** Markdown documents; shallow-checkout source-fetch test,
+  workflow parsing and diff hygiene passed.
+
+The build was warm after edit-loop checks. Peak process RSS is not combined
+worker memory, and these are not controlled speed comparisons with earlier
+batches. The older #190 receipt remains evidence for its older inputs, not the
+receipt for this batch. Subsequent documentation/source-index/receipt-only
+changes use Markdown and source-roster checks; later proof/checker/build or
+dependency changes require another full gate. Exact-head CI is recorded on
+[#191](https://github.com/q5m-ai/causal-sets/pull/191), separately from this local
+proof audit. The single bounded feedback snapshot at the audited head contained
+no reviews or comments; it is not independent human mathematical acceptance.

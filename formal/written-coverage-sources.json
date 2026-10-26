@@ -1800,9 +1800,10 @@
       "review_state": "partial",
       "indexes": [
         "formal/MIXED_NULL_CLAIMS.md",
+        "formal/MIXED_NULL_SUPPORT_CLAIMS.md",
         "formal/FULL_COVERAGE_PROGRESS.md"
       ],
-      "reason": "Existing MA/NM claim index is pinned to earlier Lean inputs. The source blob is unchanged from S; new producer results and recursive dependencies remain to be reconciled."
+      "reason": "The source blob is unchanged from S. A separately pinned producer delta supplements the frozen baseline index. Full supporting-claim correspondence, stratification, normalized conditional sampling and calibrations remain incomplete."
     },
     {
       "path": "notes/null-mixed-continuation.md",
@@ -1841,9 +1842,10 @@
       "review_state": "partial",
       "indexes": [
         "formal/MIXED_NULL_CLAIMS.md",
+        "formal/MIXED_NULL_SUPPORT_CLAIMS.md",
         "formal/FULL_COVERAGE_PROGRESS.md"
       ],
-      "reason": "Existing MA/NM claim index is pinned to earlier Lean inputs. The source blob is unchanged from S; new producer results and recursive dependencies remain to be reconciled."
+      "reason": "The source blob is unchanged from S. A separately pinned producer delta records global transport, quantitative weighted and cutoff results. General absolutely-continuous traces, finite-sigma primitives, calibrations and further supporting correspondences remain incomplete."
     },
     {
       "path": "notes/null-mixed-required-coverage.md",

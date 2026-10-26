@@ -12,7 +12,11 @@ remaining written results, including supporting claims not implied by this
 unweighted limit. The [current progress ledger](FULL_COVERAGE_PROGRESS.md)
 refreshes the source scope to the newer research integration and accounts for
 every pinned Markdown source without equating source accounting with proofs.
-Full research coverage is still incomplete.
+The [subsequent supporting-producer delta](MIXED_NULL_SUPPORT_CLAIMS.md) adds
+actual global coarea, quantitative weighted errors, the C1 generator formula,
+tip/collar/complement control, partner-cutoff accounting and explicit original-law
+moments/layers. It records narrower hypotheses and remaining ancillary claims;
+full research coverage is still incomplete.
 
 **Status: the general admissible graph-cap deterministic boundary limit,
 the original ellipsoid and null-plane-cap continuum limits, and the concrete
@@ -49,8 +53,8 @@ identity, and target identification now complete both original two-face limit
 goals. The independently proved Poisson bridge supplies the expectation limit.
 The subsequent smooth one-tip mixed theorem also supplies parametric induced
 Lorentzian joint area for its specific class. Arbitrary null boundaries,
-general induced null-joint geometry, quantitative rates, variance, and
-sample-wise convergence remain outside the checked claims.**
+general induced null-joint geometry, rates beyond the explicit mixed-weight
+estimates, variance, and sample-wise convergence remain outside the checked claims.**
 
 Lean **4.19.0** and mathlib **v4.19.0** are pinned. `lake-manifest.json` pins the
 resolved dependency commits; mathlib is
@@ -1754,6 +1758,12 @@ workers and a warm library build. The subsequent
 [mixed-limit receipt](receipts/mixed-null-limit-validation.json) records 361
 Lean files and 3,607 public library theorems plus all public definitions in
 **45:48.72**, also with two workers and unchanged proof inputs across the run.
+The [subsequent supporting-claim receipt](receipts/written-support-validation.json)
+records **394** Lean files, **3,872** public library theorems and all public
+definitions in **49:29.45**, with two workers, peak single-process RSS
+**2,908,268 KiB**, and all 398 input fingerprints/nine dependency pins unchanged.
+Its separate incremental run took **3:59.68**. None of these counts measures
+complete coverage of the written research.
 Initial cold build/dependency setup is separate; these are not controlled
 comparisons with the historical timings. Real
 adversarial tests require the pinned toolchain, but no mathlib build:

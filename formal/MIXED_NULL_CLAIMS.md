@@ -5,6 +5,11 @@
 This is a claim-level comparison, **not a declaration that either entire note
 has complete Lean coverage**.
 
+**Later producer delta:** [MIXED_NULL_SUPPORT_CLAIMS.md](MIXED_NULL_SUPPORT_CLAIMS.md)
+records subsequent global-weight, weighted-error, generator, cutoff, face and
+probability proofs at a separate Lean pin. The classifications below remain
+historical statements about L; they are not the latest implementation status.
+
 - **Written source pin `S`:** `9e0068f91c219fe61984d20fdb3f6939eab907c4`.
   The sources read in full are
   [the MA assembly note at S](https://github.com/q5m-ai/causal-sets/blob/9e0068f91c219fe61984d20fdb3f6939eab907c4/notes/null-mixed-assembly.md)
