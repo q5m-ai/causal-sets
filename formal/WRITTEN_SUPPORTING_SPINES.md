@@ -5,7 +5,9 @@ This supplements [the family inventory](PROOF_COVERAGE.md) and
 source review, **not an exhaustive statement index or new proof**. Mathematical
 sources are pinned to **S = `9e0068f91c219fe61984d20fdb3f6939eab907c4`**; the
 review presentation is **R = `1ad9c9ae1d32b7405062371dbb018db7f30f7bc1`**.
-The linked source notes are unchanged from S.
+The linked source notes are unchanged from S. The later
+[current scope update](FULL_COVERAGE_PROGRESS.md) additionally includes the
+research integrated after S; this bounded S-era review does not cover it.
 
 A stronger port may discharge a narrower final result by an explicit proved
 specialization. It does not silently discharge all intermediate estimates,

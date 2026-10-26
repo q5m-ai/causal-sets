@@ -1,0 +1,147 @@
+{
+  "repository": "q5m-ai/causal-sets",
+  "pull_request": "https://github.com/q5m-ai/causal-sets/pull/191",
+  "base_branch": "lean-coverage-audit",
+  "base_commit": "bdb92ec2657ce783abdc7c69a07caf13c10e49c2",
+  "written_source_commit": "113f83d099449221fdacf20a404d57f5939e896d",
+  "lean_input_commit": "d65b537235ce1e38ec27b74a88441905d1f4f354",
+  "last_lean_source_commit": "3fb9fdf7d0ea02c9d051788290426363685460d9",
+  "audited_checkout_commit": "d65b537235ce1e38ec27b74a88441905d1f4f354",
+  "full_local_audit": {
+    "command": "cd formal && LEAN_NUM_THREADS=2 ./check.sh",
+    "workers": 2,
+    "started_at": "2026-10-25T23:49:25Z",
+    "completed_at": "2026-10-26T00:38:58Z",
+    "exit_status": 0,
+    "elapsed": "49:29.45",
+    "maximum_process_rss_kib": 2908268,
+    "local_lean_sources_including_aggregate": 394,
+    "per_source_checks": 393,
+    "aggregate_public_theorems": 3872,
+    "aggregate_public_definitions": "all",
+    "warnings_as_errors": true,
+    "allowed_transitive_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "written-support-full-audit.log.gz",
+    "log_gzip_sha256": "a69a9da3aa8efdfea8208f07acf2508094d5b1d00e8ff2469fc5c458e6d89d5e",
+    "time": "written-support-full-audit.time.txt",
+    "measurement_boundary": "Warm library build after targeted/incremental development checks. Dependency setup is not included. Peak RSS is for one process, not concurrent worker total. Not a controlled benchmark against preceding batches."
+  },
+  "input_identity": {
+    "file": "written-support-inputs.json.gz",
+    "files": 398,
+    "uncompressed_sha256": "0569fcb72add8ea3368f730a047a8188cb4fba889ae44be7d7ea4ae9af4a810d",
+    "selection": "Every local formal/*.lean recursively, excluding .lake and .tools; plus check.sh, lakefile.toml, lake-manifest.json, lean-toolchain. Repository-relative paths.",
+    "source_fingerprints_equal_before_and_after_full_audit": true,
+    "dependency_and_toolchain_fingerprints_equal_before_and_after_full_audit": true,
+    "checkout_identity_equal_before_and_after_full_audit": true,
+    "matches_lean_input_commit": true,
+    "compiled_objects_hashed": false
+  },
+  "toolchain": {
+    "version": "Lean 4.19.0",
+    "commit": "6caaee842e94",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+  },
+  "dependency_pins_post_audit": [
+    {
+      "package": "mathlib",
+      "commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "package": "plausible",
+      "commit": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "commit": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "package": "importGraph",
+      "commit": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "package": "proofwidgets",
+      "commit": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "package": "aesop",
+      "commit": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "package": "Qq",
+      "commit": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "package": "batteries",
+      "commit": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "package": "Cli",
+      "commit": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "other_validation": {
+    "incremental_command": "cd formal && LEAN_NUM_THREADS=2 ./check.sh --incremental --base origin/lean-coverage-audit",
+    "incremental_result": "passed",
+    "incremental_completed_at": "2026-10-25T23:48:08Z",
+    "incremental_elapsed": "3:59.68",
+    "incremental_maximum_process_rss_kib": 2718120,
+    "incremental_log": "written-support-incremental.log.gz",
+    "incremental_time": "written-support-incremental.time.txt",
+    "markdown_source_checker_and_real_lean_tests": {
+      "command": "python3 -m unittest -v test_check_written_coverage test_check_markdown test_formal_check test_formal_axioms",
+      "passed": 54,
+      "real_lean_tests": 8
+    },
+    "mixed_diagnostics": {
+      "command": "python -m unittest -v test_null_mixed test_mixed_poisson",
+      "python": "3.12.3",
+      "dependencies": "requirements.txt",
+      "passed": 23,
+      "elapsed_seconds": 22.516
+    },
+    "source_roster": {
+      "command": "python3 check_written_coverage.py",
+      "sources": 132,
+      "result": "passed",
+      "review_states": {
+        "partial": 31,
+        "pending": 99,
+        "excluded": 2,
+        "indexed": 0
+      },
+      "scope": "Immutable source accounting and local index references only; not statement or proof completeness."
+    },
+    "shallow_checkout_exact_source_fetch": "passed",
+    "workflow_yaml_parse": "passed",
+    "markdown_lint": {
+      "command": "python3 check_markdown.py",
+      "documents": 106,
+      "problems": 0
+    },
+    "diff_hygiene": "passed"
+  },
+  "bounded_feedback_snapshot": {
+    "reviewed_head": "d65b537235ce1e38ec27b74a88441905d1f4f354",
+    "reviews": 0,
+    "issue_comments": 0,
+    "inline_comments": 0,
+    "review_fix_pushes": 0,
+    "disposition": "No substantive feedback present. No second feedback pass performed after receipt/documentation publication. Not independent mathematical acceptance."
+  },
+  "ci": "All applicable checks passed on the frozen proof head. Exact-head checks after receipt/documentation publication are recorded on PR #191; CI does not replace this full local gate.",
+  "scope": "Mixed MA/NM supporting producers: actual coarea/weighted transport, quantitative local-weight errors, C1 generator action formula, tip/collar/complement limits, partner-cutoff restoration, face/sine geometry and expanded original-law probability layers; plus S13 scalar adapters. Not complete note or research coverage, general AC-trace FTC, geometric S9-S12 remainder production, general curved/null convergence, sample-wise convergence, canonical Hausdorff identification or independent human acceptance."
+}
