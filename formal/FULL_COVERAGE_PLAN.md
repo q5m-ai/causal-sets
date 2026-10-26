@@ -5,9 +5,18 @@ example. Status: incomplete.** The mixed one-tip limit is the first dependency
 batch, not the definition of completion. A passing full Lean audit certifies
 encoded statements; it does not certify coverage of the written mathematics.
 
+## Programme scope versus PR delivery
+
+The user-approved [milestone plan](WRITTEN_COVERAGE_MILESTONES.md) narrows
+**PR #191** to its implemented mixed supporting-producer batch, S13 scalar
+adapters and source-accounting infrastructure. The remaining obligations below
+move to focused follow-up PRs; they are not removed, proved or excluded by that
+change. This document is the **programme-level** acceptance contract, not the
+remaining-work checklist for #191. No merge is authorized by this scope change.
+
 ## Fixed scope
 
-The follow-up after #190 explicitly refreshes the mathematical source to
+The coverage programme after #190 explicitly refreshes the mathematical source to
 **I = `113f83d099449221fdacf20a404d57f5939e896d`**, the fetched current research
 integration, including the scoped and incomplete research merged in #180,
 #184 and #187. The [current progress ledger](FULL_COVERAGE_PROGRESS.md) records

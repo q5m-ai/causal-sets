@@ -16,7 +16,10 @@ The [subsequent supporting-producer delta](MIXED_NULL_SUPPORT_CLAIMS.md) adds
 actual global coarea, quantitative weighted errors, the C1 generator formula,
 tip/collar/complement control, partner-cutoff accounting and explicit original-law
 moments/layers. It records narrower hypotheses and remaining ancillary claims;
-full research coverage is still incomplete.
+full research coverage is still incomplete. The user-approved
+[milestone delivery plan](WRITTEN_COVERAGE_MILESTONES.md) bounds #191 to that
+implemented batch plus S13 scalar adapters and source-accounting infrastructure;
+remaining programme obligations continue in focused follow-up PRs.
 
 **Status: the general admissible graph-cap deterministic boundary limit,
 the original ellipsoid and null-plane-cap continuum limits, and the concrete

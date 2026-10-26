@@ -1,9 +1,12 @@
 # Full written-proof coverage: current scope and progress
 
-**Work in progress; full Lean coverage is not complete.** This is the continuing
-PR after [#190](https://github.com/q5m-ai/causal-sets/pull/190), not a declaration
-that another small proof batch satisfies the full task. The acceptance criteria
-remain [FULL_COVERAGE_PLAN.md](FULL_COVERAGE_PLAN.md).
+**Full Lean coverage remains incomplete.** Following user approval,
+[#191](https://github.com/q5m-ai/causal-sets/pull/191) is now explicitly bounded
+to the implemented mixed supporting-producer batch, S13 scalar adapters and
+source-accounting infrastructure. The [milestone plan](WRITTEN_COVERAGE_MILESTONES.md)
+moves the remaining obligations to focused follow-up PRs without changing the
+programme-level acceptance criteria in [FULL_COVERAGE_PLAN.md](FULL_COVERAGE_PLAN.md).
+The validated batch is not whole-note or complete-research coverage.
 
 ## Explicit source-scope refresh
 
@@ -129,7 +132,8 @@ actual unbounded coordinate time with a nonzero signed limit, endpoint cases,
 negative exterior heights, slices with axis holes, supported null chains,
 nonlinear reparameterizations, and the nonaffine sine floor.
 
-Remaining mixed obligations include the **general absolutely-continuous-trace
+Follow-up milestone 1, rather than the narrowed #191 scope, includes the
+remaining mixed obligations: the **general absolutely-continuous-trace
 FTC**, a complete smooth-face atlas, further partition/derivative identities,
 and NM12's full finite-sigma primitive and remaining calibration/normalization
 correspondences. A C1 theorem is not relabelled as the broader AC statement.
