@@ -1,5 +1,26 @@
 # Lean verification: checked components and explicit targets
 
+For a source-pinned comparison with the **whole written research programme**,
+see the [claim-to-Lean coverage map](PROOF_COVERAGE.md). It distinguishes the
+restricted checked limits from the written manuscript theorems, unresolved
+mathematics, and the remaining port plan. The
+[smooth one-tip mixed port](MIXED_NULL_LIMIT.md) now derives actual radial/joint
+geometry, Lorentzian induced area, scalar transport and concentration, then
+assembles the deterministic and separate original-law expected limits.
+The [complete-coverage acceptance contract](FULL_COVERAGE_PLAN.md) retains all
+remaining written results, including supporting claims not implied by this
+unweighted limit. The [current progress ledger](FULL_COVERAGE_PROGRESS.md)
+refreshes the source scope to the newer research integration and accounts for
+every pinned Markdown source without equating source accounting with proofs.
+The [subsequent supporting-producer delta](MIXED_NULL_SUPPORT_CLAIMS.md) adds
+actual global coarea, quantitative weighted errors, the C1 generator formula,
+tip/collar/complement control, partner-cutoff accounting and explicit original-law
+moments/layers. It records narrower hypotheses and remaining ancillary claims;
+full research coverage is still incomplete. The user-approved
+[milestone delivery plan](WRITTEN_COVERAGE_MILESTONES.md) bounds #191 to that
+implemented batch plus S13 scalar adapters and source-accounting infrastructure;
+remaining programme obligations continue in focused follow-up PRs.
+
 **Status: the general admissible graph-cap deterministic boundary limit,
 the original ellipsoid and null-plane-cap continuum limits, and the concrete
 ellipsoid's Lorentzian angle/surface-integral interpretation are proved in Lean.
@@ -33,8 +54,10 @@ independence. The actual short-overlap C³ extension and its two-jet, signed
 logarithmic response, nearly-null remainder cancellation, spatial divergence
 identity, and target identification now complete both original two-face limit
 goals. The independently proved Poisson bridge supplies the expectation limit.
-Arbitrary null boundaries, induced null-joint geometry, quantitative rates, variance, and sample-wise
-convergence remain outside the checked claims.**
+The subsequent smooth one-tip mixed theorem also supplies parametric induced
+Lorentzian joint area for its specific class. Arbitrary null boundaries,
+general induced null-joint geometry, rates beyond the explicit mixed-weight
+estimates, variance, and sample-wise convergence remain outside the checked claims.**
 
 Lean **4.19.0** and mathlib **v4.19.0** are pinned. `lake-manifest.json` pins the
 resolved dependency commits; mathlib is
@@ -1725,6 +1748,33 @@ unimported unexpected axiom and a compiler error reported both failures and
 skipped the aggregate audit. No uncached dependency-download or cold-cache
 baseline was measured, and no cross-run audit caching or fleet distribution
 has been added.
+
+**Current audit optimization:** both per-source and aggregate audits now share
+Lean's `CollectAxioms.State` visited set across roots within one environment.
+Every public root and every reachable dependency is still checked; repeated
+walks through the same dependencies are eliminated. State is never reused
+between files or runs. The historical timings above describe the older
+per-root traversal. See [the coverage map](PROOF_COVERAGE.md#efficient-verification-without-weakening-the-gate)
+and the [input-pinned validation receipt](receipts/proof-coverage-validation.json)
+for the first optimized batch: 346 Lean files passed in **42:12.05** with two
+workers and a warm library build. The subsequent
+[mixed-limit receipt](receipts/mixed-null-limit-validation.json) records 361
+Lean files and 3,607 public library theorems plus all public definitions in
+**45:48.72**, also with two workers and unchanged proof inputs across the run.
+The [subsequent supporting-claim receipt](receipts/written-support-validation.json)
+records **394** Lean files, **3,872** public library theorems and all public
+definitions in **49:29.45**, with two workers, peak single-process RSS
+**2,908,268 KiB**, and all 398 input fingerprints/nine dependency pins unchanged.
+Its separate incremental run took **3:59.68**. None of these counts measures
+complete coverage of the written research.
+Initial cold build/dependency setup is separate; these are not controlled
+comparisons with the historical timings. Real
+adversarial tests require the pinned toolchain, but no mathlib build:
+
+```sh
+# From the repository root:
+python3 -m unittest -v test_formal_check test_formal_axioms
+```
 
 An optional task-local Lean 4.19.0 distribution can be installed at
 `.tools/lean-4.19.0-linux/`; `check.sh` detects it without changing global

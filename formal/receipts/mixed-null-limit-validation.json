@@ -1,0 +1,114 @@
+{
+  "repository": "q5m-ai/causal-sets",
+  "base_branch": "lean-coverage-audit",
+  "base_commit": "c2449d3d621ff699e1c57f09dd421338233b1d7b",
+  "written_source_commit": "9e0068f91c219fe61984d20fdb3f6939eab907c4",
+  "lean_input_commit": "17618065b5286d07f7eb41a6eb586cd52d8e35a0",
+  "audited_checkout_commit": "17618065b5286d07f7eb41a6eb586cd52d8e35a0",
+  "full_local_audit": {
+    "command": "cd formal && LEAN_NUM_THREADS=2 ./check.sh",
+    "workers": 2,
+    "completed_at": "2026-10-25T19:05:56Z",
+    "exit_status": 0,
+    "elapsed": "45:48.72",
+    "maximum_process_rss_kib": 2908044,
+    "local_lean_sources_including_aggregate": 361,
+    "per_source_checks": 360,
+    "aggregate_public_theorems": 3607,
+    "aggregate_public_definitions": "all",
+    "warnings_as_errors": true,
+    "allowed_transitive_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "mixed-null-limit-full-audit.log.gz",
+    "log_gzip_sha256": "86a07353c73eed66162e2334a16356dd6b5908b09d1c8eca6a7ab72df7db5e3e",
+    "time": "mixed-null-limit-full-audit.time.txt",
+    "measurement_boundary": "Warm library build after targeted/incremental development checks; dependency setup is not included. Peak RSS is for one process, not the concurrent worker total. Not a controlled benchmark against the preceding batch."
+  },
+  "input_identity": {
+    "file": "mixed-null-limit-inputs.json.gz",
+    "files": 365,
+    "uncompressed_sha256": "dd337cc4ec481689b8d54931275bde534cecf5724660206503d7497e04927ddd",
+    "selection": "Every local formal/*.lean recursively, excluding .lake and .tools; plus check.sh, lakefile.toml, lake-manifest.json, lean-toolchain. Repository-relative paths.",
+    "source_fingerprints_equal_before_and_after_full_audit": true,
+    "dependency_and_toolchain_fingerprints_equal_before_and_after_full_audit": true,
+    "matches_lean_input_commit": true,
+    "compiled_objects_hashed": false
+  },
+  "toolchain": {
+    "version": "Lean 4.19.0",
+    "commit": "6caaee842e94",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+  },
+  "dependency_pins_post_audit": [
+    {
+      "package": "mathlib",
+      "commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "package": "plausible",
+      "commit": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "commit": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "package": "importGraph",
+      "commit": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "package": "proofwidgets",
+      "commit": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "package": "aesop",
+      "commit": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "package": "Qq",
+      "commit": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "package": "batteries",
+      "commit": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "package": "Cli",
+      "commit": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "other_validation": {
+    "incremental_command": "cd formal && LEAN_NUM_THREADS=2 ./check.sh --incremental --base origin/lean-coverage-audit",
+    "incremental_result": "passed",
+    "incremental_elapsed": "1:37.80",
+    "incremental_log": "mixed-null-limit-incremental.log.gz",
+    "markdown_checker_and_real_lean_tests": {
+      "command": "python3 -m unittest -v test_check_markdown test_formal_check test_formal_axioms",
+      "passed": 39,
+      "real_lean_tests": 8
+    },
+    "mixed_diagnostics": {
+      "command": "python -m unittest -v test_null_mixed test_mixed_poisson",
+      "python": "3.12.3",
+      "dependencies": "requirements.txt",
+      "passed": 23,
+      "elapsed_seconds": 22.033
+    },
+    "markdown_lint": "passed",
+    "diff_hygiene": "passed"
+  },
+  "ci": "Exact-head applicable CI is recorded on the stacked pull request after publication. CI does not replace this full local gate.",
+  "scope": "Core unweighted deterministic and original-law expected induced-area limits for the entire original smooth flat 4D mixed one-tip class; actual geometric/analytic producers plus closure/frontier and measurable source-partition support. Not whole-note or complete-research coverage; no weighted/tip asymptotic theorem, general null/mixed result, curved metric, sample-wise convergence, canonical Hausdorff identification or independent human acceptance."
+}

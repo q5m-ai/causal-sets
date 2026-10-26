@@ -1,0 +1,118 @@
+{
+  "repository": "q5m-ai/causal-sets",
+  "pull_request": 189,
+  "base_branch": "issue-81-general-coverage",
+  "base_commit": "9e0068f91c219fe61984d20fdb3f6939eab907c4",
+  "lean_input_commit": "18053bec7b220282db29c84a550cb9d7eb543840",
+  "audited_checkout_commit": "fd3c61aca8fcb68a2e1a4bf4f68930a535b4d302",
+  "full_local_audit": {
+    "command": "cd formal && LEAN_NUM_THREADS=2 ./check.sh",
+    "workers": 2,
+    "completed_at": "2026-10-25T16:41:08.640675+00:00",
+    "exit_status": 0,
+    "elapsed": "42:12.05",
+    "maximum_process_rss_kib": 2916828,
+    "local_lean_sources_including_aggregate": 346,
+    "per_source_checks": 345,
+    "aggregate_public_theorems": 3498,
+    "aggregate_public_definitions": "all",
+    "warnings_as_errors": true,
+    "allowed_transitive_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "proof-coverage-full-audit.log.gz",
+    "log_gzip_sha256": "12ff40584a105ff13e2605acbc6ac981cb25b2eb7e4b9f29b5d1505fd5bced91",
+    "time": "proof-coverage-full-audit.time.txt",
+    "measurement_boundary": "Warm library build; targeted dependency cache and initial cold local build completed beforehand. Peak RSS is for one process, not the simultaneous worker total. Historical 2:42:37 receipt is not a controlled same-host benchmark."
+  },
+  "input_identity": {
+    "file": "proof-coverage-inputs.json.gz",
+    "files": 350,
+    "uncompressed_sha256": "1c5497488f2fae0049ba7addded289365e8a3e2271e6e324efb4ab24331df5a7",
+    "selection": "Every local formal/*.lean recursively, excluding .lake and .tools; plus check.sh, lakefile.toml, lake-manifest.json, lean-toolchain. Repository-relative paths.",
+    "source_fingerprints_equal_before_and_after_full_audit": true,
+    "matches_lean_input_commit": true,
+    "compiled_objects_hashed": false
+  },
+  "toolchain": {
+    "version": "Lean 4.19.0",
+    "commit": "6caaee842e94",
+    "lean_binary_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+  },
+  "dependency_pins_post_audit": [
+    {
+      "package": "mathlib",
+      "commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+      "tracked_clean": true
+    },
+    {
+      "package": "plausible",
+      "commit": "77e08eddc486491d7b9e470926b3dbe50319451a",
+      "tracked_clean": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "commit": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+      "tracked_clean": true
+    },
+    {
+      "package": "importGraph",
+      "commit": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+      "tracked_clean": true
+    },
+    {
+      "package": "proofwidgets",
+      "commit": "c4919189477c3221e6a204008998b0d724f49904",
+      "tracked_clean": true
+    },
+    {
+      "package": "aesop",
+      "commit": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+      "tracked_clean": true
+    },
+    {
+      "package": "Qq",
+      "commit": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+      "tracked_clean": true
+    },
+    {
+      "package": "batteries",
+      "commit": "f5d04a9c4973d401c8c92500711518f7c656f034",
+      "tracked_clean": true
+    },
+    {
+      "package": "Cli",
+      "commit": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+      "tracked_clean": true
+    }
+  ],
+  "other_validation": {
+    "incremental_command": "cd formal && LEAN_NUM_THREADS=2 ./check.sh --incremental --base origin/issue-81-general-coverage",
+    "incremental_result": "passed",
+    "incremental_elapsed": "0:33.93",
+    "markdown_checker_and_real_lean_tests": {
+      "command": "python3 -m unittest -v test_check_markdown test_formal_check test_formal_axioms",
+      "passed": 39,
+      "real_lean_tests": 8
+    },
+    "mixed_diagnostics": {
+      "command": "python -m unittest -v test_null_mixed test_mixed_poisson",
+      "python": "3.12.3",
+      "dependencies": "requirements.txt",
+      "passed": 23,
+      "elapsed_seconds": 30.613
+    },
+    "markdown_lint": "passed",
+    "diff_hygiene": "passed"
+  },
+  "code_head_ci": {
+    "head": "fd3c61aca8fcb68a2e1a4bf4f68930a535b4d302",
+    "applicable_checks": "All passed: deterministic-diagnostics, math-authoring, Quality and exact image",
+    "deterministic_run": "https://github.com/q5m-ai/causal-sets/actions/runs/40209616261",
+    "deployment_jobs": "skipped",
+    "followup": "Receipt and explanatory Markdown-only followup is separate; check the live PR for its exact-head CI. No further Lean/checker/config/dependency input changes."
+  },
+  "scope": "Stocktake plus actual one-tip mixed finite-density reduction and separate original-law expectation. No new mixed area or asymptotic theorem, no complete port of CO/FLAT/SW/C2 or S30, no sample-wise convergence, and no independent human acceptance."
+}

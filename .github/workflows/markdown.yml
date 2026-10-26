@@ -20,3 +20,19 @@ jobs:
         run: python3 check_markdown.py
       - name: Test the authoring guard
         run: python3 -m unittest -v test_check_markdown
+      - name: Fetch the immutable written-source pin
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import subprocess
+          from check_written_coverage import SHA
+          pin = json.loads(Path('formal/written-coverage-sources.json').read_text())['source_commit']
+          if not isinstance(pin, str) or not SHA.fullmatch(pin):
+              raise SystemExit('Written source must be pinned to a full commit SHA')
+          subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', pin], check=True)
+          PY
+      - name: Check written-source accounting (not proof coverage)
+        run: |
+          python3 check_written_coverage.py
+          python3 -m unittest -v test_check_written_coverage
